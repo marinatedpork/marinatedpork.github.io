@@ -29,9 +29,10 @@ body {
 	padding: 5px 5px 5px 5px;
 	bottom: 0;
 	width: 80%;
-	margin: 20px 80px 60px 19%;
-	float: left;
-	padding: 10px 10px 10px 10px;
+	margin: 10px -5px 0 18.5%;
+	float: center;
+	padding: 10px 0px 10px 10px;
+	position: center
 }
 
 
