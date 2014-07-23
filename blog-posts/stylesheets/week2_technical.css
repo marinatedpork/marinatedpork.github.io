@@ -1,0 +1,21 @@
+* {
+	font-family: Gotham, Helvetica, sanserif;
+}
+
+.header {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	padding: 3%;
+	background-color: gray;
+	position: relative;
+}
+
+.inline {
+	display: inline-block;
+	background-color: red;
+}
+
+div {
+	border-radius: 5px;
+}
