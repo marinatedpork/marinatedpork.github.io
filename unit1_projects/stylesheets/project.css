@@ -97,8 +97,13 @@ h3 {
     display: block;
 }
 
+.blog-img {
+    width: 500px;
+    height: auto;
+}
+
 .center {
-    margin: 0 auto;
+    margin: 0 25%;
 }
 
 .pig {
@@ -128,7 +133,7 @@ h3 {
 }*/
 
 .article:hover .pig {
-    background-color: black;
+    background-color: #323232;
 }
 
 .description {
