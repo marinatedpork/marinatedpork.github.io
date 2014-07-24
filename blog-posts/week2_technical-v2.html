@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html>
+	<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
 
-<title></title>
-
-<link rel="stylesheet" type="text/css" href="week2_technical.css">
-
-<div class="header">
-
-	<a href="http://marinatedpork.github.io/index.html"><h1>marinated pork</h1</a>
-</div>
-
-
-<body>
-		
-
-		<div id="sidebarwrapper">
-					<p>Week one work:</p>
-		<p><a href="unit1_projects/wireframe_sites.html" target="_blank">Challenge 8</a></p>
-		<p><a href="blog-posts/week1_cultural.html" target="_blank">Challenge 7</a></p>
-		<p><a href="blog-posts/week1_technical.html" target="_blank">Challenge 6</a></p>
-		<p><a href="unit1_projects/dbc2.html" target="_blank">Challenge 5</a></p>
-		<p><a href="unit1_projects/dbc1.html" target="_blank">Challenge 4</a></p>
+	<header> <!-- this is where the navbar should be -->
+		<title>tech blog 2</title>
+		<div id="nav">
+			<div id="container">
+				<a href=""><div id="button">home</div></a>
+				<a href=""><div id="button">blog</div></a>
+				<a href=""><div id="button">projects</div></a>
+			</div>
 		</div>
-
-
-		<div class="holder">
-			<h1>Intermediate CSS: Display inline vs inline-block</h1>
+	</header>
+	<body> <!-- this is where the landing image will be -->
+		<div id="landing">
+			<div class="droplow">
+				<div class="author-names">blog
+				</div>
+			</div>
+		</div>
+		<section>
+			<h1>Display inline vs inline-block</h1>
+			<h2>July 24, 2014</h2>
 			<h3>Know the values</h3>
 			<p>Part of putting together a well designed page means having control over how different boxes and containers behave around each other. When we introduce new elements into our page, like a header section or a social media button, we have must establish these behaviors. One way to establish this behavior is to use the <em>display</em> property. What follows is an explanation of two different values of <em>display</em>: </p>
 			<ul>
@@ -37,17 +33,17 @@
 
 			<h3>Display: Inline</h3>
 			<p>According to the W3 Schools description of the display property<sup><a href="#1">1</a></sup>, inline is the default value of the display property. An element with the property/value display: inline means that the element is displayed inside the current block on the same line. Thus, creating no new lines. An inline element only creates a new line when it is forced to by other elements, the inline element's width however becomes the smallest possible<sup><a href="#2">2</a></sup>. Inline elements do not take width or height nor respect bottom or top margins and padding. A heplful part of them is that they allow elements to sit to the left and right. Please take a look at the example:</p>
-			<div class="example-holder">
+			<div class="t2-example-holder">
 				<h3>Example:</h3>
-				<section class="forcer">
+				<section class="t2-forcer">
 					display block
-					<section class="forcer2">display block</section>
-					<section class="inline">inline</section>
+					<section class="t2-forcer2">display block</section>
+					<section class="t2-inline">inline</section>
 				</section>		
-				<section class="forcer">
+				<section class="t2-forcer">
 					display block
-					<section class="inline">inline</section><section class="inline">inline</section>
-					<section class="forcer2">display block</section>
+					<section class="t2-inline">inline</section><section class="inline">inline</section>
+					<section class="t2-forcer2">display block</section>
 				</section>		
 			</div>
 
@@ -75,14 +71,14 @@
 
 			<p>The inline-block value of the display property places an element as an inline-level block container. Thus, it is on the same line as adjacent elements. Additionally, the width and height may be set, and they respect all margins and padding. Take a look at the example below to see how they behave:</p>
 
-			<div class="example-holder">
+			<div class="t2-example-holder">
 				<h3>Example:</h3>
-				<section class="forcer">
+				<section class="t2-forcer">
 					display block - Here's some content that is a sentence.
-					<section class="inline-block">inline-block. Let's give it a width and height of 120px and a bit of margin/padding.</section>
+					<section class="t2-inline-block">inline-block. Let's give it a width and height of 120px and a bit of margin/padding.</section>
 					Here's some content that is a sentence.
 					Here's some content that is a sentence.
-					<section class="inline-block">inline-block. Let's give it a width and height of 120px and a bit of margin/padding.</section>
+					<section class="t2-inline-block">inline-block. Let's give it a width and height of 120px and a bit of margin/padding.</section>
 					Here's some content that is a sentence.
 				</section>					
 			</div>
@@ -129,13 +125,6 @@
 				<li><a name="2"</a><sup>2</sup><a href="http://quirksmode.org/css/css2/display.html">Quirks Mode: Display</a></li>
 				<li><a name="3"></a><sup>3</sup><a href="http://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block">Stack Overflow: Inline vs Inline-block</a></li>
 			</ul>
-		</div>
-	<div class="footer">
-		this message has been brought to you by marinated pork.
-
-	</div>
-
-</body>
+		</section>
+	</body>
 </html>
-
-
