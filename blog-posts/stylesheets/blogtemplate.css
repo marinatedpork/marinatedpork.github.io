@@ -1,5 +1,5 @@
 * {
-	font-family: Lucida;
+	font-family: Gotham, Helvetica, sanserif;
 	font-size: 12px;
 	color: white;
 	text-shadow: .5px .5px .5px .5px black;
@@ -106,7 +106,7 @@ ul {
 }
 
 p {
-
+	margin: 5px 15px 5px 15px;
 }
 
 div {

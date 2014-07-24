@@ -1,19 +1,141 @@
-<!DOCTYPE hmtl>
+<!DOCTYPE html>
 <html>
 
-	<header>
-		<link rel="stylesheet" type="text/css" href="stylesheets/week2_technical.css">
-		<div class="header">
-			<h1>Experiment with Inline-Block</h1>
-			<nav class="inline"><a href="index.html">Home</a></nav>
-			<nav class="inline"><a href="mailto:m.j.mey3rs@gmail.com"></a>Contact</nav>
+<title></title>
+
+<link rel="stylesheet" type="text/css" href="week2_technical.css">
+
+<div class="header">
+
+	<a href="http://marinatedpork.github.io/index.html"><h1>marinated pork</h1</a>
+</div>
+
+
+<body>
+		
+
+		<div id="sidebarwrapper">
+					<p>Week one work:</p>
+		<p><a href="unit1_projects/wireframe_sites.html" target="_blank">Challenge 8</a></p>
+		<p><a href="blog-posts/week1_cultural.html" target="_blank">Challenge 7</a></p>
+		<p><a href="blog-posts/week1_technical.html" target="_blank">Challenge 6</a></p>
+		<p><a href="unit1_projects/dbc2.html" target="_blank">Challenge 5</a></p>
+		<p><a href="unit1_projects/dbc1.html" target="_blank">Challenge 4</a></p>
 		</div>
-	</header>
 
 
-	</nav>
-	<body>
+		<div class="holder">
+			<h1>Intermediate CSS: Display inline vs inline-block</h1>
+			<h3>Know the values</h3>
+			<p>Part of putting together a well designed page means having control over how different boxes and containers behave around each other. When we introduce new elements into our page, like a header section or a social media button, we have must establish these behaviors. One way to establish this behavior is to use the <em>display</em> property. What follows is an explanation of two different values of <em>display</em>: </p>
+			<ul>
+				<li>Inline</li>
+				<li>Inline-block</li>
+			</ul>	
 
-	</body>
+			<p>Although this post does implement and mention the <em>block</em> value of the display property, it is not explained as in-depth as these other two values. To learn more about the <em>block</em> value, <a href="http://learnlayout.com/display.html">check out this site</a> or see the <a href="#1">sources below</a>!</p>
 
+			<h3>Display: Inline</h3>
+			<p>According to the W3 Schools description of the display property<sup><a href="#1">1</a></sup>, inline is the default value of the display property. An element with the property/value display: inline means that the element is displayed inside the current block on the same line. Thus, creating no new lines. An inline element only creates a new line when it is forced to by other elements, the inline element's width however becomes the smallest possible<sup><a href="#2">2</a></sup>. Inline elements do not take width or height nor respect bottom or top margins and padding. A heplful part of them is that they allow elements to sit to the left and right. Please take a look at the example:</p>
+			<div class="example-holder">
+				<h3>Example:</h3>
+				<section class="forcer">
+					display block
+					<section class="forcer2">display block</section>
+					<section class="inline">inline</section>
+				</section>		
+				<section class="forcer">
+					display block
+					<section class="inline">inline</section><section class="inline">inline</section>
+					<section class="forcer2">display block</section>
+				</section>		
+			</div>
+
+			<p>Notice in the example above that the display inline element is being forced onto a new line by the block elements around it. Additionally, the block elements take up as much width as they can and the inline element takes up the minimum amount of width. Finally, the inline element respects the left and right margins that we've given it, but not the top and bottom.</p>
+			<br>
+			<p>Here's the CSS syntax for the classes "inline" and "forcer2", which we've assigned to sections above. Can you guess which section has which class?
+				<p class="code">.inline {</p>
+				<strong><p class="code">display: inline;</p></strong>
+				<p class="code">border: solid black;</p>
+				<p class="code">background-color: #213C6E;</p>
+				<p class="code">margin: 5px 20px 5px 20px;</p>
+				<p class="code">padding: 2px;</p>
+				<p class="code">}</p>
+				<br>
+				<p class="code">.forcer2 {</p>
+				<strong><p class="code">display: block;</p></strong>
+				<p class="code">background-color: #213C6E;</p>
+				<p class="code">border: 2px solid black;</p>
+				<p class="code">margin: 5px 20px 5px 20px;</p>
+				<p class="code">}</p>
+				<br>
+			</p>
+
+			<h3>Display: Inline-Block</h3>
+
+			<p>The inline-block value of the display property places an element as an inline-level block container. Thus, it is on the same line as adjacent elements. Additionally, the width and height may be set, and they respect all margins and padding. Take a look at the example below to see how they behave:</p>
+
+			<div class="example-holder">
+				<h3>Example:</h3>
+				<section class="forcer">
+					display block - Here's some content that is a sentence.
+					<section class="inline-block">inline-block. Let's give it a width and height of 120px and a bit of margin/padding.</section>
+					Here's some content that is a sentence.
+					Here's some content that is a sentence.
+					<section class="inline-block">inline-block. Let's give it a width and height of 120px and a bit of margin/padding.</section>
+					Here's some content that is a sentence.
+				</section>					
+			</div>
+
+			<p>Notice that the inline-bock containers have respected the width and height that we have given them as well as the margins and padding.  Meanwhile, content is sitting on the left and the right.  Pretty neat, huh?</p>
+			<br>
+			<p>Here's the CSS syntax for the class "inline-block", which we've assigned to our inline-blocks above. See how it respects all the margin, padding, height and width properties we've given it?</p>
+			<br>
+				<p class="code">.inline-block {</p>
+				<strong><p class="code">display: inline-block;</p></strong>
+				<p class="code">border: solid black;</p>
+				<p class="code">background-color: #213C6E;</p>
+				<p class="code">margin: 5px 10px 5px 10px;</p>
+				<p class="code">padding: 2px;</p>
+				<p class="code">width: 120px;</p>
+				<p class="code">height: 120px;</p>
+				<p class="code">}</p>
+
+			<h3>Summary</h3>
+			<p>There is a time and place for both of these display values, so it's important to know how to use them both. One user on <a href="http://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block">Stack Overflow</a> sums it up perfectly with the following rules for block, inline and inline-block elements<sup><a href="#3">3</a></sup>:</p>
+			<ul>
+			<li><strong>Inline elements:</strong></li>
+			<ol>
+			<li>Respect left and right margins and padding, but not top and bottom.</li>
+			<li>Cannot have a width and height set.</li>
+			<li>Allow other elements to sit to their left and right.</li>
+			</ol>
+			<li><strong>Block elements:</strong></li>
+			<ol>
+			<li>Respect all of those.</li>
+			<li>Force a line break after the block element.</li>
+			</ol>
+			<li><strong>Inline-block elements:</strong></li>
+			<ol>
+			<li>Allow other elements to sit to their left and right.</li>
+			<li>Respect top and bottom margins and padding.</li>
+			<li>Respect height and width.</li>
+			</ol>
+			</ul>
+			<p></p>
+			<h3>Sources:</h3>
+			<ul>
+				<li><a name="1"></a><sup>1</sup><a href="http://www.w3schools.com/cssref/pr_class_display.asp">W3 Schools: Display</a></li>
+				<li><a name="2"</a><sup>2</sup><a href="http://quirksmode.org/css/css2/display.html">Quirks Mode: Display</a></li>
+				<li><a name="3"></a><sup>3</sup><a href="http://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block">Stack Overflow: Inline vs Inline-block</a></li>
+			</ul>
+		</div>
+	<div class="footer">
+		this message has been brought to you by marinated pork.
+
+	</div>
+
+</body>
 </html>
+
+

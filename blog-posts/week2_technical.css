@@ -1,22 +1,208 @@
 * {
 	font-family: Gotham, Helvetica, sanserif;
+	font-size: 14px;
+	color: white;
+	text-shadow: .5px .5px .5px .5px black;
+	letter-spacing:1px
+}
+
+body {
+	background-color: #2e3b54	
 }
 
 .header {
-	width: 80%;
-	height: auto;
-	margin: 0 auto;
-	padding: 3%;
-	background-color: gray;
-	position: relative;
+	float: top;
+	height: 30%;
+	margin: 3% 0% 1% 0%;
+	padding: 10px 0px 10px 10px;
+	background-color: #213C6E;
+	text-shadow: 1px 1px black
 }
 
-.inline {
-	display: inline-block;
-	background-color: red;
-	border-radius: 5px;
+#sidebarwrapper img {
+	text-align: left;
+	height: 20%;
+	width: auto;
+	float:left
+	;margin:0 5px 0 0
+}
+
+.header h1 {
+	position: absolute;
+	float: center;
+	font-style: bold;
+	text-shadow: 1px 1px 1px 1px black;
+	color: white;
+}
+
+.header h1 {
+	position: relative;
+	float: center
+}
+
+
+.footer {
+	padding: 5px 5px 5px 5px;
+	bottom: 0;
+	width: 80%;
+	margin: 10px -5px 0 18.5%;
+	float: center;
+	position: center;
+	background-color: #3a3a3a;
+	text-align: center;
+}
+
+
+#sidebarwrapper {
+	width: 17%;
+	height: 100%;
+	float: left;
+	position: left;
+	bottom: 0;
+	text-align: center;
+	padding: 10px 1px 1px 1px;
+	background-color: #213C6E;
+	border: 2px solid #213C6E;
+}
+
+.content {
+	float: center;
+	padding: 5px 5px 5px 5px;
+	width: 98.5%;
+	height: 100%;
+	margin: 3px 3px 3px 3px;
+	background-color: #bdbdbd
+}
+
+.holder {
+	float: center;
+	padding: 5px 5px 5px 5px;
+	width: 80%;
+	height: 100%;
+	margin: 5px -5px 0 18.5%;
+	background-color: #3a3a3a;
+	padding: 5px 5px 50px 5px;
+	border: none;
+}
+
+}
+
+img {
+	box-shadow: .5px .5px .5px .5px #FF8C00
+}
+
+img {
+	margin: 0 auto;
+	display: block;
+
+}
+
+li {
+
+}
+
+ul {
+
+}
+
+p {
+	margin: 5px 15px 5px 15px;
+}
+
+p.code {
+	margin-left: 100px;
+	color: #7FFF00;
+	font-family: Times;
 }
 
 div {
-	border-radius: 5px;
+	border: none;
+	background-color: white;
+	box-shadow: .25px .25px .25px .25px #000000
+}
+
+h2 {
+	text-align: center;
+	font-size: 16px;
+	color: #00FF00
+}
+
+h3 {
+	text-align: left;
+	font-size: 16px;
+	color: #00FF00;
+	margin: 20px 5px 15px 5px;
+}
+
+h5 {
+	color: #00FF00
+}
+
+h6 {
+	text-align: center;
+}
+
+h1 {
+	font-size: 32px;
+	text-align: center;
+	color: #7FFF00;
+	text-shadow: 1px 1px black
+}
+
+a {
+	font-size: 18px;
+	text-decoration: none;
+	color: #7FFF00
+}
+
+a:link {
+	color: #00FF00
+}
+
+a:visited {
+	color: #00FF00	
+}
+
+a:hover {
+	color: #FF0000
+}
+
+.inline {
+	display: inline;
+	border: solid black;
+	background-color: #213C6E;
+	margin: 5px 20px 5px 20px;
+	padding: 2px;
+}
+
+.inline-block {
+	display: inline-block;
+	border: solid black;
+	background-color: #213C6E;
+	margin: 5px 10px 5px 10px;
+	padding: 2px;
+	width: 120px;
+	height: 120px;
+}
+
+.forcer {
+	display: block;
+	margin: 10px 20px 10px 20px;
+	padding: 2px;
+	background-color: #213C6E;
+	border: 2px solid black;
+}
+
+.example-holder {
+	margin: 15px 75px 15px 75px;
+	padding: 2px;
+	background-color: #213C48;
+	border: 2px solid black;
+	}
+
+.forcer2 {
+	display: block;
+	background-color: #213C6E;
+	border: 2px solid black;
+	margin: 5px 20px 5px 20px;
 }
