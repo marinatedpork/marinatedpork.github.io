@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
+
+	<header> <!-- this is where the navbar should be -->
+		<title>blog</title>
+		<div id="nav">
+				<div id="container">
+				<a href="http://marinatedpork.github.io/"><div id="button">home</div></a>
+				<a href="http://marinatedpork.github.io/blog-posts/newblog.html"><div id="button">blog</div></a>
+				<a href="http://marinatedpork.github.io/unit1_projects/project.html"><div id="button">projects</div></a>
+				</div>
+		</div>
+	</header>
+	<body> <!-- this is where the landing image will be -->
+		<div id="landing">
+			<div class="droplow">
+				<div class="author-names">blog
+				</div>
+			</div>
+		</div>
+		<section>
+			<h1>().group_by</h1>
+<h2>August 5, 2014</h2>
+<h3>Three cool uses of the ().group_by method</h3>
+
+<p>The method <strong>().group_by { |x| block }</strong> groups a collection in a hash by the result of the code within the block. In other words, you can take a collection and separate it however you want. How is that useful? Let’s check out some of the stuff you can do with this method, so we can get a better understanding of how to use it.</p>
+
+<h2>Organize Items in a Hash by Value:</h2>
+
+<p>Watch how we call the ().group_by on the ages hash by separating each key/value pair by value to figure out who we can take to the bar:</p>
+<br>
+<p class="code">$ ages = { </p>
+  <p class="code">"Matt" => 15,</p>
+  <p class="code">"Ben" => 32,</p>
+  <p class="code">"Bryan" => 10,</p>
+  <p class="code">"Shan" => 43,</p>
+  <p class="code">"Charlie" => 23,</p>
+  <p class="code">}</p>
+<br>
+<p class="code">$ <strong>(ages).group_by { |key, value| value > 20}</strong></p>
+<br>
+<p class="code">#=> {<strong>false</strong>=>[ [ "Matt", 15 ], [ "Bryan", 10 ] ], </p>
+<p class="code"><strong>true</strong> => [ [ "Ben", 32 ], [ "Shan", 43 ], [ "Charlie", 23 ] ] }</p>
+
+<br>
+
+<h2>Separate Prime Numbers in a Series:</h2>
+
+<p>Find the prime numbers in a range for some really high-level math stuff, like for a <a href="https://projecteuler.net/problem=3">Project Euler problem</a> or something. Notice here, we require the “prime” class so we can access the method .prime? that we use in the block.</p>
+<br>
+
+<p class="code">$ require 'prime'</p>
+<p class="code">$<strong> (10..70).group_by { |number| number.prime? }</strong></p>
+<br>
+<p class="code">#=> { <strong>false</strong> => [ 10, 12, 14, 15, 16, 18, 20, </p>
+	<p class="code">21, 22, 24, 25, 26, 27, 28, </p>
+	<p class="code">30, 32, 33, 34, 35, 36, 38, </p>
+	<p class="code">39, 40, 42, 44, 45, 46, 48, </p>
+	<p class="code">49, 50, 51, 52, 54, 55, 56, </p>
+	<p class="code">57, 58, 60, 62, 63, 6</p>
+<p class="code">4, 65, 66, 68, 69, 70], </p>
+<p class="code"><strong>true</strong> => [ 11, 13, 17, 19, 23, 29, 31, </p>
+<p class="code">37, 41, 43, 47, 53, 59, 61, 67 ] } </p>
+<br>
+
+<h2>Organize Data on a Conditional:</h2>
+
+<p>You can also group boolean statements. Below, ().group_by takes the members of the array “family” and isolated the names that start with the letter ‘m’ and those that don’t:</p>
+<br>
+
+<p class="code">$ family = [ "Matt", "Danny", "Gina", "Margaret", "Mike" ]</p>
+<p class="code">$ <strong>(family).group_by { |x| x[0].downcase === 'm'}</strong></p>
+<br>
+<p class="code">#=> {<strong>true</strong>=>[ "Matt", "Margaret", "Mike" ], </p>
+<p class="code"><strong>false</strong> => [ "Danny", "Gina" ] }</p>
+<br>
+
+<p>Those are just three of the cool things we can do with ().group_by. Go ahead and open up your IRB and experiment. Can you think of anything else that you  To read more about it <a href="http://www.ruby-doc.org/core-2.1.1/Enumerable.html#method-i-group_by">check it out here</a>.<p>
+
+		</section>
+	</body>
+</html>
