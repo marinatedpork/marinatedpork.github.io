@@ -26,7 +26,7 @@
 
 <p>The method <strong>().group_by { |x| block }</strong> groups a collection in a hash by the result of the code within the block. In other words, you can take a collection and separate it however you want. How is that useful? Let’s check out some of the stuff you can do with this method, so we can get a better understanding of how to use it.</p>
 
-<h2>Organize Items in a Hash by Value:</h2>
+<h2>1. Organize Items in a Hash by Value:</h2>
 
 <p>Watch how we call the ().group_by on the ages hash by separating each key/value pair by value to figure out who we can take to the bar:</p>
 <br>
@@ -45,7 +45,7 @@
 
 <br>
 
-<h2>Separate Prime Numbers in a Series:</h2>
+<h2>2. Separate Prime Numbers in a Series:</h2>
 
 <p>Find the prime numbers in a range for some really high-level math stuff, like for a <a href="https://projecteuler.net/problem=3">Project Euler problem</a> or something. Notice here, we require the “prime” class so we can access the method .prime? that we use in the block.</p>
 <br>
@@ -64,7 +64,7 @@
 <p class="code">37, 41, 43, 47, 53, 59, 61, 67 ] } </p>
 <br>
 
-<h2>Organize Data on a Conditional:</h2>
+<h2>3. Organize Data on a Conditional:</h2>
 
 <p>You can also group boolean statements. Below, ().group_by takes the members of the array “family” and isolated the names that start with the letter ‘m’ and those that don’t:</p>
 <br>
