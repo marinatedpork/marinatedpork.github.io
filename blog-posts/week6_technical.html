@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
+
+	<header> <!-- this is where the navbar should be -->
+		<title>The Use of Method in Modules and Classes</title>
+		<div id="nav">
+				<div id="container">
+				<a href="http://marinatedpork.github.io/"><div id="button">home</div></a>
+				<a href="http://marinatedpork.github.io/blog-posts/newblog.html"><div id="button">blog</div></a>
+				<a href="http://marinatedpork.github.io/unit1_projects/project.html"><div id="button">projects</div></a>
+				</div>
+		</div>
+	</header>
+	<body> <!-- this is where the landing image will be -->
+		<div id="landing">
+			<div class="droplow">
+				<div class="author-names">blog
+				</div>
+			</div>
+		</div>
+		<section>
+			<h1>The Use of Method in Modules and Classes</h1>
+			<h2>August 24, 2014</h2>
+			<h3>class instance method, module instance methods, and module functions</h3>
+			<br>
+			<p>In short, I would summarize modules as collections of tools that we use on and include in classes. In this post, I want to briefly look at a few functional differences in terms of how we use methods when working with classes, mixins, and modules.</p>
+			<br>
+			<p>Classes are constructors used to create instances of themselves. If you have a class that is used only for a method or function, then you are misusing the class construct. In such a case you would use a module, which is intended to be a collection or library of methods and constants. For example, if you have methods that you want to use across multiple classes, then you would create a module to store those methods. So if you have code that logically belongs together but will not be used to create instances, then a module is the correct construct. </p>
+			<br>
+			<p>What really helped me understand the functional difference between modules and classes was how each use methods. Let’s look at three are different method types: class instance method, module instance methods, and module functions.</p>
+			<br>
+			<p>A class instance method is one that you write into your class for example:</p>
+			<br>
+			<p class="code">class Cls</p>
+			<br>
+				<p class="code">def class_method</p>
+					<p class="code">puts "This is a class method. I work on this class." </p>
+				<p class="code">end</p>
+			<br>
+			<p class="code">end</p>
+			<br>
+			<p class="code">c = Cls.new</p>
+			<p class="code">c.class_method</p>
+			<p class="code">=> "This is a class method. I work on this class." </p>
+			<br>
+			<p>#class_method can then only be used on ones on instances of classes that are of or inherit the class Cls</p>
+			<br>
+			<p>A module instance method is a method that is written into a module but can only be used on classes that has that includes the module. Check out the example below:</p>
+			<br>
+			<p class="code">module Mod</p>
+			<br>
+				<p class="code">def instance_method</p>
+					<p class="code">puts "I am an instance method. I am used by mixing this module with a class."</p>
+				<p class="code">end</p>
+			<br>
+			<p class="code">end</p>
+			<br>
+			<br>
+			<p class="code">class Cls</p>
+			<br>
+			<p class="code">include Mod	</p>
+			<br>
+				<p class="code">def class_method</p>
+					<p class="code">puts "This is a class method. I work on this class." </p>
+				<p class="code">end</p>
+				<br>
+			<p class="code">end</p>
+			<br>
+			<p class="code">c = Cls.new</p>
+			<p class="code">b = Mod</p>
+			<p class="code">c.instance_method</p>
+			<p class="code">=> I am an instance method. I am used by mixing this module with a class.</p>
+			<p class="code">b.instance_method</p>
+			<p class="code">=> Error</p>
+			<br>
+			<p>Then there are module functions which are methods that are only usable on modules. One creates a module function simply by creating a method on lines below “module_function” syntax. For example, let’s create a module function in our Mod module and try to use it on both a class and a module:</p>
+			<br>
+			<p class="code">module Mod</p>
+			<br>
+				<p class="code">def instance_method</p>
+					<p class="code">puts "I am an instance method. I am used by mixing this module with a class."</p> 
+					<p class="codecom"># Can only be used on mixin.</p>
+				<p class="code">end</p>
+				<br>	
+				<p class="code">module_function</p>
+				<br>
+				<p class="code">def mod_func</p>
+					<p class="code">puts "I am a module function. I only work on a module."</p>
+					<p class="codecom"># Can only be called by a module</p>
+				<p class="code">end</p>
+				<br>
+			<p class="code">end</p>
+			<br>
+			<br>
+			<p class="code">class Cls</p>
+			<br>
+			<p class="code">include Mod	</p>
+			<br>
+				<p class="code">def class_method</p>
+					<p class="code">puts "This is a class method. I work on this class." </p>
+				<p class="code">end</p>
+				<br>
+			<p class="code">end</p>
+			<br>
+			<p class="code">c = Cls.new</p>
+			<p class="code">b = Mod</p>
+			<p class="code">b.mod_func</p>
+			<p class="code">=> I am a module function. I only work on a module.</p>
+			<p class="code">c.mod_func</p>
+			<p class="code">=> Error</p>
+			<p class="code">c.instance_method</p>
+			<p class="code">=> I am an instance method. I am used by mixing this module with a class.</p>
+			<br>
+			<p>The idea behind separating classes and modules is simply to create a more streamlined workflow. Organizing methods and constants into a library makes it a lot easier to to use them in a number of different places and can save time for rewriting different methods. I would say that this falls into Ruby’s separation of concerns. As someone who is a beginner, it seems to me that I will be using modules much more when I have methods that I want to use across multiple apps in Rails, for example. For example, a credit card validation system may likely be used across a number of sites. So it might be a good idea to create a Luhn module.</p>
+			<br>
+			<p>For a snapshot on the differences between the two, <a href="http://stackoverflow.com/a/9778021/3786971">check out this table here</a>. It is very helpful and includes some finer points not covered here.</p>
+			<br>
+			<p>If you would like to read more on the topic. Please check out the links below:</p>
+				<ul>
+				<li><a href="http://matt.aimonetti.net/posts/2012/07/30/ruby-class-module-mixins/">Matt Aimonetti: Ruby Class, Module, Mixins</a></li>
+				<li><a href="http://apidock.com/ruby/Module">API Dock: Module</a></li>
+				<li><a href="http://stackoverflow.com/questions/151505/difference-between-a-class-and-a-module">Stack Overflow: Difference Between Class and Module</a></li>
+				</ul>
+
+
+		</section>
+	</body>
+</html>
