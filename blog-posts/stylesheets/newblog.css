@@ -183,6 +183,9 @@ a:hover {
 a:visited {
     color: gray;
 }
+.black {
+    color: black;
+}
 
 /*Technical blog stuff*/
 

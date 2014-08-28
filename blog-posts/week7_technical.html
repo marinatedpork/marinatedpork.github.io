@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
+
+	<header> <!-- this is where the navbar should be -->
+		<title>blog</title>
+		<div id="nav">
+				<div id="container">
+				<a href="http://marinatedpork.github.io/"><div id="button">home</div></a>
+				<a href="http://marinatedpork.github.io/blog-posts/newblog.html"><div id="button">blog</div></a>
+				<a href="http://marinatedpork.github.io/unit1_projects/project.html"><div id="button">projects</div></a>
+				</div>
+		</div>
+	</header>
+	<body> <!-- this is where the landing image will be -->
+		<div id="landing">
+			<div class="droplow">
+				<div class="author-names">blog
+				</div>
+			</div>
+		</div>
+		<section>
+			<h1>SQL Injection</h1>
+			<h2>August 28, 2014</h2>
+			<h3>What they are and how we avoid them</h3>
+			<p>SQL Injection is a code injection technique in which SQL statements are inserted into an entry field so that it can be executed. These injections are by and large malicious attacks by people trying to disrupt your system. The results of which can be very costly when you have someone enter “DROP table tweets” while filling out a form.  A server that is not equipped to handle such a threat takes the field entry as code and, in the case of entering “DROP tables tweets”, would thus delete your entire tweets table.  </p>
+			<br>
+			<p>Obviously one wonders why some jerk would ever come along and disrupt your database like that. People have their motives, though. If you’re running a business with a competitor, they might try to set you back by disrupting your data. Otherwise, there might be someone out there who just wants to watch the world burn. Regardless, developers ought to implement means of preventing this.</p>
+			<br>
+			<p>You may avoid these SQL injections by being mindful of the following things:</p>
+			<br>
+			<ul class="black">
+			<li>Filter for literal escape characters (symbols or words that invoke interpretation) and also make sure your system is converting character types during interpretation or compiling. Each language may have a different procedure for doing this. Regardless the idea is to put a control in place that would, for example, turn all fields temporarily into strings and require a specific method for sending literal SQL commands. </li>
+			<br>
+			<li>Understand your languages type strength. Ruby for example is strongly and dynamically typed. This means that it a language where the type of a variable can be altered at any time and it is strict about how you can use your variable. Ask yourself, how is the user input going to be interpreted? What datatype is it?</li>
+			<br>
+			<li>Mitigate injection attacks at the code level with object relational mapping.  Object-relational mapping (ORM) is essentially a means of creating a virtual object database than can be used within your programming language. In Ruby this would mean mapping sqlite3 or something similar into objects.</li>
+			<br>
+			<li>Implement parameterized statements by preparing statements with placeholders than can only store a certain type of information and not an arbitrary SQL fragment. In this case, the an SQL fragment would be treated as simply a very strange looking string.</li>
+			<br>
+			<li>Database permissions that deny certain literals or queries can also be implemented to simply blog users from selections and tables.</li>
+			<br>
+			<li>Create pattern checks that looks for specific values series in strings before passing along any information. For example, a string may be checked to for a date type or alphanumeric pattern and only pass it along if it matches the pattern you’ve implemented.</li>
+			</ul>
+			<br>
+			
+			<p>To read more about SQL injection specifically about Ruby on Rails, check out some of the links below:<p>
+			<ul>
+				<li><a href="http://www.computerworld.com/article/2489654/malware-vulnerabilities/ruby-on-rails-patches-tackle-sql-injection-vulnerabilities.html">Ruby on Rails patches tackle SQL injection vulnerabilities</a></li>
+				<li><a href="http://rails-sqli.org/">Rails SQL Injection</a></li>
+				<li><a href="http://guides.rubyonrails.org/security.html"></a>Ruby on Rails Security Guide</li>
+			</ul>
+
+		</section>
+	</body>
+</html>
