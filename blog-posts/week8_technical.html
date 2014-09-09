@@ -3,7 +3,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
 
 	<header> <!-- this is where the navbar should be -->
-		<title>blog</title>
+		<title>Regular Expression and How to Use Them</title>
 		<div id="nav">
 				<div id="container">
 				<a href="http://marinatedpork.github.io/"><div id="button">home</div></a>
@@ -20,6 +20,71 @@
 			</div>
 		</div>
 		<section>
+			<h1>Regular Expression</h1>
+			<h2>September 8, 2014</h2>
+			<h3>They really not as bad as they look</h3>
+			<p>Regular expressions are sequences of characters that form a search patterns which are can be run on strings. We use them to find patterns in language and text, which we may then operate on. Regexps, as they are commonly called, are useful, but their syntax is unattractive and makes them appear complicated. Let’s take a look at the regular expressions in Ruby and how to use them. </p>
+			<br>
+			<p>First, there are three ways to instantiate a regular expression:</p>
+			<br>
+				<p class="code">/regexp/</p>
+				<p class="code">%r{regexp}</p>
+				<p class="code">Regexp::new constructor</p>
+			<br>
+			<p>Where ‘regexp’, you would put pattern and literal characters. Pattern or metacharacters refer to symbols and letters that are not literally interpreted for running the expression. Instead, they provide the regexp with more precise search instructions. Check out Tutorial Points page for a resource on pattern characters. Literal Characters, then, are the characters in the regexp that are interpreted literally. Let’s check out an example:</p>
+			<br>
+				<p class="code">cat = Regexp.new(/cat/)  </p>
+				<p class="codecom">#contains only literal characters</p>
+				<p class="code">cat2 = Regexp.new(/[Cc]at/) </p>
+				<p class="codecom">#contains both characters types, [xy] finds both x and y in that </p>
+				<p class="code">space.</p>
+					<br>
+				<p class="code">cat =~ “cat” ? true : false</p>
+				<p class="code">=> true</p>
+				<p class="code">cat =~ “Cat” ? true : false</p>
+				<p class="code">=> false</p>
+				<br>
+				<p class="code">cat2 =~ “cat” ? true : false</p>
+				<p class="code">=> true</p>
+				<p class="code">cat2 =~ “Cat” ? true : false</p>
+				<p class="code">=> true</p>
+
+				<p class="codecom"># cat2 searches for Cat and cat and returns true for both strings because we</p> 
+				<p class="codecom">put those pattern characters in there.</p>
+			<br>
+			<p>The ‘=~’ symbol is used for running the regular expression on the string. Used by itself, without any conditionals like we did above, it will return nil if there is regexp no match in the string. Otherwise, it will return a fixnum if there is a match.</p>
+			<br>
+			<p>Covering regexp pattern characters in its entirety is far too exhaustive of a task for this post, so please check out the link above for a thorough look at them. For now, I want to look at three important methods for strings that use regular expressions: #split, #gsub and #sub:</p>
+			<br>
+			<p>The #split method will split a string into an array based on the pattern of the regexp. The format of the is as such:</p>
+			<br>
+				<p class="code">String.split(/regex/)</p>
+			<br>
+			<p>This method is super helpful if, for example, you want to create an array of words in a string. You would use the following syntax:</p>
+				<br>
+				<p class="code">string = “Ruby is a gemstone”</p>
+				<p class="code">string.split(/\s+/)</p>
+				<p class="code">=>[“Ruby”, “is”, “a”, “gemstone”]</p>
+			<br>
+			<p>The above regexp, /\s+/, tells the Ruby split where is see one or more units of white space (white space means both spaces and newlines. ‘\s’ denotes white space and ‘+’ denotes one or more.</p>
+			<br>
+			<p>The #sub and #gsub methods are used for finding a pattern in a string and replacing them with your own input.  Both do the same thing and operate the same except #sub only operates on the first occurrence of the pattern whereas as #gsub (‘g’ being short for ‘global’) replaces all occurrences of the pattern. If we had a friend who constantly used too many exclamation marks (as in “OMG!!!!!”) in their strings, we could run a #sub or #gsub on their strings to replace more than one exclamation mark with one exclamation mark:</p>
+				<br>
+			<p class="code">string = “Omg, guys!!!!!!!!!! I am SO excited for the ice bucket challenge!!!!!!!!!!”</p>
+			<p class="code">string.sub(/!!+/, “!”) </p>
+			<p class="code">=> “Omg, guys! I am SO excited for the ice bucket challenge!!!!!!!!!!”</p>
+			<p class="code">string.gsub(/!!+/, “!”) </p>
+			<p class="code">=> “Omg, guys! I am SO excited for the ice bucket challenge!”</p>
+			<br>
+			<p>As mentioned above, #sub operates on only the first occurrence of the expression and #gsub operates on all occurrences.</p>
+			<br>
+			<p>Regular expressions can get much more complex than the simple examples aboves, so please do some reading for yourself on the topic. Like I’ve already mentioned, the Tutorial Point link is a great resource for pattern characters. Also, check out Rubular.com for a great interactive testing interface for regexp’s:	</p>
+			<br>
+			<ul>
+			<li><a href="http://rubular.com/">Rubular.com: Test Regular Expression</a></li>
+			<li><a href="http://www.tutorialspoint.com/ruby/ruby_regular_expressions.htm">Tutorial Point: Regular Expressions</a></li>
+			<li><a href="http://www.ruby-doc.org/core-2.1.2/Regexp.html">Ruby Doc Regular Expression Class</a></li> 
+			</ul>
 
 		</section>
 	</body>
