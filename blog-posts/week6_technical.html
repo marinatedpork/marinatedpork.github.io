@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	  	<script type="text/javascript" src="js/shCore.js"></script> 
+	  	<script type="text/javascript" src="js/shBrushRuby.js"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/shCore.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/shThemeEclipse.css">
 	<header> <!-- this is where the navbar should be -->
 		<title>The Use of Method in Modules and Classes</title>
 		<div id="nav">
 				<div id="container">
 				<a href="http://marinatedpork.github.io/"><div id="button">home</div></a>
-				<a href="http://marinatedpork.github.io/blog-posts/newblog.html"><div id="button">blog</div></a>
-				<a href="http://marinatedpork.github.io/unit1_projects/project.html"><div id="button">projects</div></a>
 				</div>
 		</div>
 	</header>
@@ -31,86 +33,86 @@
 			<p>What really helped me understand the functional difference between modules and classes was how each use methods. Let’s look at three are different method types: class instance method, module instance methods, and module functions.</p>
 			<br>
 			<p>A class instance method is one that you write into your class for example:</p>
-			<br>
-			<p class="code">class Cls</p>
-			<br>
-				<p class="code">def class_method</p>
-					<p class="code">puts "This is a class method. I work on this class." </p>
-				<p class="code">end</p>
-			<br>
-			<p class="code">end</p>
-			<br>
-			<p class="code">c = Cls.new</p>
-			<p class="code">c.class_method</p>
-			<p class="code">=> "This is a class method. I work on this class." </p>
-			<br>
-			<p>#class_method can then only be used on ones on instances of classes that are of or inherit the class Cls</p>
+<pre class="brush: rb">	
+class Cls
+			
+	def class_method
+		puts "This is a class method. I work on this class." 
+	end
+			
+end
+			
+c = Cls.new
+c.class_method
+=> "This is a class method. I work on this class."
+			
+#class_method can then only be used on ones on instances of classes that are of or inherit the class Cls</pre>
 			<br>
 			<p>A module instance method is a method that is written into a module but can only be used on classes that has that includes the module. Check out the example below:</p>
-			<br>
-			<p class="code">module Mod</p>
-			<br>
-				<p class="code">def instance_method</p>
-					<p class="code">puts "I am an instance method. I am used by mixing this module with a class."</p>
-				<p class="code">end</p>
-			<br>
-			<p class="code">end</p>
-			<br>
-			<br>
-			<p class="code">class Cls</p>
-			<br>
-			<p class="code">include Mod	</p>
-			<br>
-				<p class="code">def class_method</p>
-					<p class="code">puts "This is a class method. I work on this class." </p>
-				<p class="code">end</p>
-				<br>
-			<p class="code">end</p>
-			<br>
-			<p class="code">c = Cls.new</p>
-			<p class="code">b = Mod</p>
-			<p class="code">c.instance_method</p>
-			<p class="code">=> I am an instance method. I am used by mixing this module with a class.</p>
-			<p class="code">b.instance_method</p>
-			<p class="code">=> Error</p>
+<pre class="brush: rb">
+module Mod
+			
+	def instance_method
+		puts "I am an instance method. I am used by mixing this module with a class."
+	end
+			
+end
+			
+			
+class Cls
+			
+include Mod	
+			
+	def class_method
+		puts "This is a class method. I work on this class."
+	end
+				
+end
+			
+c = Cls.new
+b = Mod
+c.instance_method
+=> 'I am an instance method. I am used by mixing this module with a class.'
+b.instance_method
+=> Error</pre>
 			<br>
 			<p>Then there are module functions which are methods that are only usable on modules. One creates a module function simply by creating a method on lines below “module_function” syntax. For example, let’s create a module function in our Mod module and try to use it on both a class and a module:</p>
-			<br>
-			<p class="code">module Mod</p>
-			<br>
-				<p class="code">def instance_method</p>
-					<p class="code">puts "I am an instance method. I am used by mixing this module with a class."</p> 
-					<p class="codecom"># Can only be used on mixin.</p>
-				<p class="code">end</p>
-				<br>	
-				<p class="code">module_function</p>
-				<br>
-				<p class="code">def mod_func</p>
-					<p class="code">puts "I am a module function. I only work on a module."</p>
-					<p class="codecom"># Can only be called by a module</p>
-				<p class="code">end</p>
-				<br>
-			<p class="code">end</p>
-			<br>
-			<br>
-			<p class="code">class Cls</p>
-			<br>
-			<p class="code">include Mod	</p>
-			<br>
-				<p class="code">def class_method</p>
-					<p class="code">puts "This is a class method. I work on this class." </p>
-				<p class="code">end</p>
-				<br>
-			<p class="code">end</p>
-			<br>
-			<p class="code">c = Cls.new</p>
-			<p class="code">b = Mod</p>
-			<p class="code">b.mod_func</p>
-			<p class="code">=> I am a module function. I only work on a module.</p>
-			<p class="code">c.mod_func</p>
-			<p class="code">=> Error</p>
-			<p class="code">c.instance_method</p>
-			<p class="code">=> I am an instance method. I am used by mixing this module with a class.</p>
+<pre class="brush: rb">	
+module Mod
+			
+	def instance_method
+		puts "I am an instance method. I am used by mixing this module with a class."
+		# Can only be used on mixin.
+	end
+					
+	module_function
+				
+	def mod_func
+		puts "I am a module function. I only work on a module."
+		# Can only be called by a module
+	end
+				
+end
+			
+			
+class Cls
+			
+include Mod	
+			
+	def class_method
+		puts "This is a class method. I work on this class." 
+	end
+				
+end
+			
+c = Cls.new
+b = Mod
+b.mod_func
+=> 'I am a module function. I only work on a module.'
+c.mod_func
+=> Error
+c.instance_method
+=> 'I am an instance method. I am used by mixing this module with a class.'</pre>
 			<br>
 			<p>The idea behind separating classes and modules is simply to create a more streamlined workflow. Organizing methods and constants into a library makes it a lot easier to to use them in a number of different places and can save time for rewriting different methods. I would say that this falls into Ruby’s separation of concerns. As someone who is a beginner, it seems to me that I will be using modules much more when I have methods that I want to use across multiple apps in Rails, for example. For example, a credit card validation system may likely be used across a number of sites. So it might be a good idea to create a Luhn module.</p>
 			<br>
@@ -123,6 +125,7 @@
 				<li><a href="http://stackoverflow.com/questions/151505/difference-between-a-class-and-a-module">Stack Overflow: Difference Between Class and Module</a></li>
 				</ul>
 
+	  	<script type="text/javascript" src="js/blogpost.js"></script>
 
 		</section>
 	</body>

@@ -3,7 +3,7 @@
 }
 
 #landing {
-   background: url(http://i.imgur.com/inMGpIg.jpg) no-repeat center center;
+   background: url(http://i.imgur.com/lDQKTGd.jpg) no-repeat center center;
    background-size: cover;
    border-radius: 10px;
    height: 400px;
@@ -113,7 +113,9 @@ p.codecom {
 ol {
     color: black;
 }
-
+.indent {
+    margin-left: 20px
+}
 
 .article {
     width: 520px;

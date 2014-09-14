@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	  	<script type="text/javascript" src="js/shCore.js"></script> 
+	  	<script type="text/javascript" src="js/shBrushCss.js"></script>
+	  	<script type="text/javascript" src="js/blogpost.js"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/shCore.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/shThemeEclipse.css">
 
 	<header> <!-- this is where the navbar should be -->
 		<title>tech blog 2</title>
 		<div id="nav">
 				<div id="container">
 				<a href="http://marinatedpork.github.io/"><div id="button">home</div></a>
-				<a href="http://marinatedpork.github.io/blog-posts/newblog.html"><div id="button">blog</div></a>
-				<a href="http://marinatedpork.github.io/unit1_projects/project.html"><div id="button">projects</div></a>
 				</div>
 		</div>
 	</header>
@@ -50,21 +54,22 @@
 			<p>Notice in the example above that the display inline element is being forced onto a new line by the block elements around it. Additionally, the block elements take up as much width as they can and the inline element takes up the minimum amount of width. Finally, the inline element respects the left and right margins that we've given it, but not the top and bottom.</p>
 			<br>
 			<p>Here's the CSS syntax for the classes "inline" and "forcer2", which we've assigned to sections above. Can you guess which section has which class?
-				<p class="code">.inline {</p>
-				<strong><p class="code">display: inline;</p></strong>
-				<p class="code">border: solid black;</p>
-				<p class="code">background-color: #213C6E;</p>
-				<p class="code">margin: 5px 20px 5px 20px;</p>
-				<p class="code">padding: 2px;</p>
-				<p class="code">}</p>
-				<br>
-				<p class="code">.forcer2 {</p>
-				<strong><p class="code">display: block;</p></strong>
-				<p class="code">background-color: #213C6E;</p>
-				<p class="code">border: 2px solid black;</p>
-				<p class="code">margin: 5px 20px 5px 20px;</p>
-				<p class="code">}</p>
-				<br>
+<pre class="brush: css">
+.inline {
+display: inline;
+border: solid black;
+background-color: #213C6E;
+margin: 5px 20px 5px 20px;
+padding: 2px;
+}
+				
+.forcer2 {
+display: block;
+background-color: #213C6E;
+border: 2px solid black;
+margin: 5px 20px 5px 20px;
+}</pre>
+				
 			</p>
 
 			<h3>Display: Inline-Block</h3>
@@ -87,15 +92,16 @@
 			<br>
 			<p>Here's the CSS syntax for the class "inline-block", which we've assigned to our inline-blocks above. See how it respects all the margin, padding, height and width properties we've given it?</p>
 			<br>
-				<p class="code">.inline-block {</p>
-				<strong><p class="code">display: inline-block;</p></strong>
-				<p class="code">border: solid black;</p>
-				<p class="code">background-color: #213C6E;</p>
-				<p class="code">margin: 5px 10px 5px 10px;</p>
-				<p class="code">padding: 2px;</p>
-				<p class="code">width: 120px;</p>
-				<p class="code">height: 120px;</p>
-				<p class="code">}</p>
+<pre class="brush: css">
+.inline-block {
+display: inline-block;
+border: solid black;
+background-color: #213C6E;
+margin: 5px 10px 5px 10px;
+padding: 2px;
+width: 120px;
+height: 120px;
+}</pre>
 
 			<h3>Summary</h3>
 			<p>There is a time and place for both of these display values, so it's important to know how to use them both. One user on <a href="http://stackoverflow.com/questions/9189810/css-display-inline-vs-inline-block">Stack Overflow</a> sums it up perfectly with the following rules for block, inline and inline-block elements<sup><a href="#3">3</a></sup>:</p>

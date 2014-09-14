@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
-	<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	  	<script type="text/javascript" src="js/shCore.js"></script> 
+	  	<script type="text/javascript" src="js/shBrushRuby.js"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/newblog.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/shCore.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/shThemeEclipse.css">
 
 	<header> <!-- this is where the navbar should be -->
 		<title>Object Oriented Programming and Classes in Ruby</title>
 		<div id="nav">
 				<div id="container">
 				<a href="http://marinatedpork.github.io/"><div id="button">home</div></a>
-				<a href="http://marinatedpork.github.io/blog-posts/newblog.html"><div id="button">blog</div></a>
-				<a href="http://marinatedpork.github.io/unit1_projects/project.html"><div id="button">projects</div></a>
 				</div>
 		</div>
 	</header>
@@ -36,24 +39,24 @@
 			<h3>Classes in Ruby</h3>
 			<p>In Ruby, we use classes like abstractions: to group things with common attributes and behaviors. For example, the number 1 is in the Fixnum class. The Fixnum class is in the Integer class. The Integer class is in the Numeric class, which is in the Object class which is in the BasicObject class. Beyond BasicObject there is nil -- nothing at all. Go ahead and try it in your IRB:</p>
 
-					<br>
-				<p class="code">1.class</p>
-			<p class="code">	=>Fixnum</p>
+<pre class="brush: rb">
+1.class
+=>Fixnum
 
-			<p class="code">	1.class.superclass</p>
-			<p class="code">	=>Integer</p>
+1.class.superclass
+=>Integer
 
-			<p class="code">	1.class.superclass.superclass</p>
-			<p class="code">	=>Numeric</p>
+1.class.superclass.superclass
+=>Numeric
 
-			<p class="code">	1.class.superclass.superclass.superclass</p>
-			<p class="code">	=>Object</p>
+1.class.superclass.superclass.superclass
+=>Object
 
-			<p class="code">	1.class.superclass.superclass.superclass.superclass</p>
-			<p class="code">	=>BasicObject</p>
+1.class.superclass.superclass.superclass.superclass
+=>BasicObject
 
-			<p class="code">	1.class.superclass.superclass.superclass.superclass.superclass</p>
-			<p class="code">	=>nil</p>
+1.class.superclass.superclass.superclass.superclass.superclass
+=>nil</pre>				
 					<br>
 
 			<p>BasicObject is like the carbon of the Rubyverse. All things derive from BasicObject. Such is the hierarchy of Ruby.</p>
@@ -61,40 +64,41 @@
 
 			<p>This Class-structure of Ruby was written with four underlying principles of OOP: data abstraction, encapsulation, inheritance and polymorphism. These terms sound scary, but they are actually quite simple. After having become familiar with Ruby, their simplicity is almost intuitive to the point that it might even seem redundant to discuss them.  They nevertheless provide a healthy structure for learning any OOP languages. For the following discussion, we will use the below example of the class Person:</p>
 
-					<br>
-				<p class="code">class Person</p>
-					<br>
+<pre class="brush: rb">			
+class Person
+	
+  
+  def initialize(name, age, city)
+    @info = {
+      name: name,
+      age: age,
+      city: city,
+      alive: true
+      }
+  end
+					
 				  
-			<p class="code">	  def initialize(name, age, city)</p>
-			<p class="code">	    @info = {</p>
-			<p class="code">	      name: name,</p>
-			<p class="code">	      age: age,</p>
-			<p class="code">	      city: city,</p>
-			<p class="code">	      alive: true</p>
-			<p class="code">	      }</p>
-			<p class="code">	  end</p>
-					<br>
+  def who_is?
+    return @info
+  end
+					
 				  
-			<p class="code">	  def who_is?</p>
-			<p class="code">	    return @info</p>
-			<p class="code">	  end</p>
-					<br>
+  def eat
+    raise ArgumentError, "They can't eat when they're dead!" unless @info[:alive] == true
+    puts "Yum! I just ate some food."
+  end
+					
 				  
-			<p class="code">	  def eat</p>
-			<p class="code">	    raise ArgumentError, "They can't eat when they're dead!" unless @info[:alive] == true</p>
-			<p class="code">	    puts "Yum! I just ate some food."</p>
-			<p class="code">	  end</p>
-					<br>
+  def die
+    @info[:alive] = false
+    puts "#{@info[:name]} has died!"
+  end
+					
 				  
-			<p class="code">	  def die</p>
-			<p class="code">	    @info[:alive] = false</p>
-			<p class="code">	    puts "#{@info[:name]} has died!"</p>
-			<p class="code">	  end</p>
-					<br>
-				  
-			<p class="code">	end</p>
-					<br>
+end</pre>
+					
 
+					<br>
 			<p><strong>Encapsulation</strong> refers to the packaging of data and methods, and hiding them in one component. In regards to the Person class, the methods .die, .eat, .initialize .who_is? and the variable @info are hidden within the confines of the class Person, and are therefore inaccessible to objects outside the class Person. So typing .who_is? on the fixnum 1 returns an error, as that method is not packaged in the fixnum class.</p>  
 
 					<br>
@@ -103,76 +107,76 @@
 					<br>
 			<p><strong>Inheritance</strong> is when a class takes on the attributes and behavior of another class or superclass. For example, let’s say that we can to create a subclass to the Person class called Wizard that still has the same attributes and behaviors as the Person class. We can it like so:</p>
 
-					<br>
-				<p class="code">class Wizard < Person</p>
-			<p class="code">	end</p>
+<pre class="brush: rb">				
+class Wizard < Person
+end
+
+					
+Wizard.new("Gandalf", 2000, "Valinor").eat
+=>Yum! I just ate some food.
+
+Wizard.new("Gandalf", 2000, "Valinor").die
+=>Gandalf has died!
+
+Wizard.new("Gandalf", 2000, "Valinor").who_is?
+=>{:name=>"Gandalf", :age=>2000, :city=>"Valinor", :alive=>true}</pre>
+					
 
 					<br>
-			<p class="code">	Wizard.new("Gandalf", 2000, "Valinor").eat</p>
-			<p class="code">	=>Yum! I just ate some food.</p>
-
-			<p class="code">	Wizard.new("Gandalf", 2000, "Valinor").die</p>
-			<p class="code">	=>Gandalf has died!</p>
-
-			<p class="code">	Wizard.new("Gandalf", 2000, "Valinor").who_is?</p>
-			<p class="code">	=>{:name=>"Gandalf", :age=>2000, :city=>"Valinor", :alive=>true}</p>
-					<br>
-
 			<p>The Wizard class thus inherits all attributes and behaviors of the Person class. We can then build upon the attributes of the Person class and give Wizard it’s own attributes and behaviors. Let’s do this by giving our Wizard class a method for casting a spell:</p>
-					<br>
+					
+<pre class="brush: rb">
+class Wizard < Person
+					
+  def cast_spell
+    puts "#{@info[:name]} has casted a spell using level 99 magic!"
+  end
+					
+end
+			
+Wizard.new("Gandalf", 2000, "Valinor").cast_spell
+=>Gandalf has casted a spell using level 99 magic!</pre>
+					
 
-				<p class="code">class Wizard < Person</p>
 					<br>
-
-			<p class="code">	  def cast_spell</p>
-			<p class="code">	    puts "#{@info[:name]} has casted a spell using level 99 magic!"</p>
-			<p class="code">	  end</p>
-					<br>
-
-			<p class="code">	end</p>
-					<br>
-
-			<p class="code">	Wizard.new("Gandalf", 2000, "Valinor").cast_spell</p>
-			<p class="code">	=>Gandalf has casted a spell using level 99 magic!</p>
-					<br>
-
 			<p>The use of inheritance in developing can save a lot of time, so one ought to keep it in mind.</p>
 
 					<br>
 			<p><strong>Polymorphism</strong> literally means “many forms”. In OOP, we use this word to describe methods and attributes that are interpreted differently per the type of object on which they are used. For example, our Person class has the .die method. However, we might want to make our Wizard’s .die method more fitting to how we think of wizards, so let’s polymorph .die:</p>
-					<br>
+					
+<pre class="brush: rb">
+class Wizard < Person
+					
+  def cast_spell
+    puts "#{@info[:name]} has casted a spell using lightning!"
+  end
 
-				<p class="code">class Wizard < Person</p>
-					<br>
-			<p class="code">	  def cast_spell</p>
-			<p class="code">	    puts "#{@info[:name]} has casted a spell using lightning!"</p>
-			<p class="code">	  end</p>
+					
+  def die
+    puts "Fly you fools!"
+   @info[:alive] = false
+  end
+
+					
+end
+
+					
+Wizard.new("Gandalf", 2000, "Valinor").die
+=> Fly you fools!</pre>
+					
 
 					<br>
-			<p class="code">	  def die</p>
-			<p class="code">	    puts "Fly you fools!"</p>
-			<p class="code">	   @info[:alive] = false</p>
-			<p class="code">	  end</p>
-
-					<br>
-			<p class="code">	end</p>
-
-					<br>
-			<p class="code">	Wizard.new("Gandalf", 2000, "Valinor").die</p>
-			<p class="code">	=> Fly you fools!</p>
-					<br>
-
 			<p>Now, let’s look at how our polymorphic method behaves. Let’s ake an array that has one Wizard class object and one Person class object, iterate through them with the .die method and see the difference:</p>
-					<br>
+<pre class="brush: rb">			
+sentients = [ Wizard.new("Gandalf", 2000, "Valinor"), Person.new("Matt", 25, "Chicago") ]
+sentients.each do |x| puts x.die 
+end
 
-				<p class="code">sentients = [ Wizard.new("Gandalf", 2000, "Valinor"), Person.new("Matt", 25, "Chicago") ]</p>
-			<p class="code">	sentients.each do |x| puts x.die </p>
-			<p class="code">	end</p>
+					
+=> Fly you fools!
+=> Matt has died!</pre>
 
-					<br>
-			<p class="code">	=> Fly you fools!</p>
-			<p class="code">	=> Matt has died!</p>
-
+					
 					<br>
 			<p>Again, these principles seem intuitive, but looking at them one by one is very helpful for conceptualizing OOP languages. Also, this description was very brief so please check out the further reading below for more in depth descriptions:</p>
 			<ul>
@@ -194,5 +198,6 @@
 			<li><a href="http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID Principles of OOP Design</a></li>
 			</ul>
 		</section>
+	  	<script type="text/javascript" src="js/blogpost.js"></script>
 	</body>
 </html>
