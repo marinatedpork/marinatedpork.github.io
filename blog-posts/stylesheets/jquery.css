@@ -3,14 +3,14 @@
 }
 
 #landing {
-   background: url(http://i.imgur.com/inMGpIg.jpg) no-repeat center center;
-   background-size: cover;
-   border-radius: 10px;
-   height: 400px;
-   width: 100%;
-   position: relative;
-   display: block;
-   position: relative;
+            background: url(http://i.imgur.com/inMGpIg.jpg) no-repeat center center;
+            background-size: cover;
+            border-radius: 10px;
+            height: 400px;
+            width: 100%;
+            position: relative;
+            display: block;
+			position: relative;
 }
 
 #nav {

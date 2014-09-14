@@ -1,0 +1,383 @@
+* {
+	font-family: Gotham, Helvetica, sanserif;
+    font-color: #323232;
+}
+.center {
+    margin: 0 auto;
+}
+#nav {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+
+#container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+}
+
+#button {
+        background: white;
+        letter-spacing:2px;
+        padding: 14px 10px;
+        width: 100px;
+        display:inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin: auto;
+        border-radius: 3px;
+        color: #6d6d6d;
+        text-align: center;
+        vertical-align: center;
+        -o-transition:color .2s ease-out, background .5s ease-in;
+        -ms-transition:color .2s ease-out, background .5s ease-in;
+        -moz-transition:color .2s ease-out, background .5s ease-in;
+        -webkit-transition:color .2s ease-out, background .5s ease-in;
+      /* ...and now override with proper CSS property */
+        transition:color .2s ease-out, background .5s ease-in;
+        position: relative;
+}
+
+#button:hover {
+    background-color: #FD0987;
+    color: white;
+}
+.author-name {
+        background: #00ffff;
+        letter-spacing:2px;
+        padding: 14px 10px;
+        /*width: 200px;*/
+        display:inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin: auto;
+        border-radius: 3px;
+        color: white;
+        text-align: center;
+        vertical-align: center;
+    }
+.article {
+    width: 300px;
+    display: inline-block;
+    margin: 5px;
+}
+.title {
+    margin-left: 70px;
+    margin-bottom: 10px;
+    display: inline-block; 
+    padding: 14px 10px;
+    border-radius: 5px;
+}
+.cultural {
+    background-color: #FD0987;  
+    width: 150px;
+    text-align: center;
+    vertical-align: center;
+}
+.technical {
+    background-color: #00ffff;  
+    width: 165px;
+    text-align: center;
+    vertical-align: center;
+}
+.encompass {
+    margin-top: 3%;
+    background-color:rgba(255,255,255,0.85);
+    padding: 10px;
+    border-radius: 10px
+}
+.wrapper1 {
+    display: inline-block;
+    width: 300px;
+    margin-left: 5px;
+}            
+.description {
+    display: inline-block;
+    width: 220px;
+    position: absolute;
+    padding: 10px;
+}
+
+.blog {
+    display: inline-block;
+    width: 615px;
+    margin-left: 25%;
+}
+
+.about {
+    display: inline-block;
+    width: 615px;
+    margin-left: 25%;
+}
+.portrait {
+    width: 400px;
+    height: auto;
+    border-radius: 1px;
+    margin-left: 17.5%;
+}
+.z {
+    z-index: 10;
+    float: left
+}
+
+#landing {
+    background: url(http://i.imgur.com/1SqFCBu.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    height: 725px;
+    width: 100%;
+    position: relative;
+    display: block;
+    position: relative;
+}
+.droplow {
+    float: right;
+    position: center;
+    bottom: 0;
+}
+
+/* text stuff */
+
+h1 {
+    margin-bottom: -5px;
+    margin-top: 2px;
+    color: black;
+    font-size: 20px;
+    width: 220px;
+}
+h2 {
+    margin-left: 10px;
+    margin-top: 3px;
+    margin-bottom: -5px;
+    font-size: 16px;
+    color: black;
+    width: 220px;
+}
+h3 {
+    margin-left: 75px;
+    margin-bottom: 20px;
+    color: #323232
+} 
+h4 {
+    font-size: 20px;
+}
+p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 2px 10px 2px 10px
+}
+.whitetext {
+    color: white
+}
+/*blog div layout, buttons*/
+
+.pig {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/8Ttw1qf.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig2 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/MBGO5Xm.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+    margin-bottom: 2px;
+}
+.pig3 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/52KdmIY.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig4 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/vGUZZwm.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig5 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/z16DCaE.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig6 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/AKzkB4F.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig7 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/zwBKtw0.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig8 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/QWyHtBC.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig9 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/4OgrMyD.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig10 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/ITHrkwU.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig11 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/4PCZpNv.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig12 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/AeHCTkn.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig13 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/pZRdU3O.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+.pig14 {
+    display: inline-block;
+    border-radius: 50%;
+    background: url(http://i.imgur.com/Gpn7Pps.png) no-repeat 10px center;
+    background-size: 45px;
+    height: 25px;
+    width: 25px;
+    padding: 20px;
+}
+/*cultural blog*/
+.article:hover .pig{
+    background-color: #FD0987;
+}
+.article:hover .pig2{
+    background-color: #FD0987;
+}
+.article:hover .pig4{
+    background-color: #FD0987;
+}
+.article:hover .pig6{
+    background-color: #FD0987;
+}
+.article:hover .pig8{
+    background-color: #FD0987;
+}
+.article:hover .pig11{
+    background-color: #FD0987;
+}
+.article:hover .pig13{
+    background-color: #FD0987;
+}
+/*tech blog*/
+.article:hover .pig3{
+    background-color: #00ffff;
+}
+.article:hover .pig5{
+    background-color: #00ffff;
+}
+.article:hover .pig7{
+    background-color: #00ffff;
+}
+.article:hover .pig9{
+    background-color: #00ffff;
+}
+.article:hover .pig10{
+    background-color: #00ffff;
+}
+.article:hover .pig14{
+    background-color: #00ffff;
+}
+.article:hover .pig12{
+    background-color: #00ffff;
+}
+
+.gray-bg {
+    background-color: #424242;
+         -o-transition:color .2s ease-out, background .5s ease-in;
+        -ms-transition:color .2s ease-out, background .5s ease-in;
+        -moz-transition:color .2s ease-out, background .5s ease-in;
+        -webkit-transition:color .2s ease-out, background .5s ease-in;
+      /* ...and now override with proper CSS property */
+        transition:color .2s ease-out, background .5s ease-in;
+}
+.red-bg {
+    background-color: red;
+         -o-transition:color .2s ease-out, background .5s ease-in;
+        -ms-transition:color .2s ease-out, background .5s ease-in;
+        -moz-transition:color .2s ease-out, background .5s ease-in;
+        -webkit-transition:color .2s ease-out, background .5s ease-in;
+      /* ...and now override with proper CSS property */
+        transition:color .2s ease-out, background .5s ease-in;
+}
+.blue-bg {
+    background-color: blue;
+         -o-transition:color .2s ease-out, background .5s ease-in;
+        -ms-transition:color .2s ease-out, background .5s ease-in;
+        -moz-transition:color .2s ease-out, background .5s ease-in;
+        -webkit-transition:color .2s ease-out, background .5s ease-in;
+      /* ...and now override with proper CSS property */
+        transition:color .2s ease-out, background .5s ease-in;
+}
+.yellow-bg {
+    background-color: #f87901;
+         -o-transition:color .2s ease-out, background .5s ease-in;
+        -ms-transition:color .2s ease-out, background .5s ease-in;
+        -moz-transition:color .2s ease-out, background .5s ease-in;
+        -webkit-transition:color .2s ease-out, background .5s ease-in;
+      /* ...and now override with proper CSS property */
+        transition:color .2s ease-out, background .5s ease-in;
+}
