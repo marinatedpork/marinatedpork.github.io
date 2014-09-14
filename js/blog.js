@@ -49,19 +49,19 @@ var pig = $('.pig'),
 
 blogContainer.hide()
 aboutContainer.hide()
-blogButton.click(function(){
+blogButton.click(function(event){
 	 event.preventDefault()
 	 if (aboutContainer.css('display') != 'none' ){
 		aboutContainer.fadeOut(400, 'easeInQuad')}
 	blogContainer.fadeToggle(500, 'easeInQuad')
 })
-aboutButton.click(function(){
+aboutButton.click(function(event){
 	 event.preventDefault()
 	 if (blogContainer.css('display') != 'none' ){
 		blogContainer.fadeOut(300, 'easeInQuad')}
 	aboutContainer.fadeToggle(500, 'easeInQuad')
 })
-homeButton.click(function(){
+homeButton.click(function(event){
 	event.preventDefault()
 	if (blogContainer.css('display') != 'none' ){
 		blogContainer.fadeOut(300, 'easeInQuad')}
