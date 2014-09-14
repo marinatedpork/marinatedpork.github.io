@@ -43,14 +43,14 @@ cat = Regexp.new(/cat/)
 cat2 = Regexp.new(/[Cc]at/) 
 #contains both characters types, [xy] finds both x and y in that space.
 
-cat =~ “cat” ? true : false
+cat =~ 'cat' ? true : false
 => true
-cat =~ “Cat” ? true : false
+cat =~ 'Cat' ? true : false
 => false
 	
-cat2 =~ “cat” ? true : false
+cat2 =~ 'cat' ? true : false
 => true
-cat2 =~ “Cat” ? true : false
+cat2 =~ 'Cat' ? true : false
 => true
 # cat2 searches for Cat and cat and returns true for both strings because 
 # we put those pattern characters in there.</pre>
@@ -68,9 +68,9 @@ String.split(/regex/)</pre>
 			<p>This method is super helpful if, for example, you want to create an array of words in a string. You would use the following syntax:</p>
 				<br>
 <pre class="brush: rb">
-string = “Ruby is a gemstone”
+string = 'Ruby is a gemstone'
 string.split(/\s+/)
-=>[“Ruby”, “is”, “a”, “gemstone”]</pre>
+=>['Ruby', 'is', 'a', 'gemstone']</pre>
 
 			<br>
 			<p>The above regexp, /\s+/, tells the Ruby split where is see one or more units of white space (white space means both spaces and newlines. ‘\s’ denotes white space and ‘+’ denotes one or more.</p>
@@ -78,11 +78,11 @@ string.split(/\s+/)
 			<p>The #sub and #gsub methods are used for finding a pattern in a string and replacing them with your own input.  Both do the same thing and operate the same except #sub only operates on the first occurrence of the pattern whereas as #gsub (‘g’ being short for ‘global’) replaces all occurrences of the pattern. If we had a friend who constantly used too many exclamation marks (as in “OMG!!!!!”) in their strings, we could run a #sub or #gsub on their strings to replace more than one exclamation mark with one exclamation mark:</p>
 				<br>
 <pre class="brush: rb">
-string = “Omg, guys!!!!!!!!!! I am SO excited for the ice bucket challenge!!!!!!!!!!”
-string.sub(/!!+/, “!”) 
-=> “Omg, guys! I am SO excited for the ice bucket challenge!!!!!!!!!!”
-string.gsub(/!!+/, “!”) 
-=> “Omg, guys! I am SO excited for the ice bucket challenge!”</pre>
+string = 'Omg, guys!!!!!!!!!! I am SO excited for the ice bucket challenge!!!!!!!!!!'
+string.sub(/!!+/, '!') 
+=> 'Omg, guys! I am SO excited for the ice bucket challenge!!!!!!!!!!'
+string.gsub(/!!+/, '!') 
+=> 'Omg, guys! I am SO excited for the ice bucket challenge!'</pre>
 			<br>
 			<p>As mentioned above, #sub operates on only the first occurrence of the expression and #gsub operates on all occurrences.</p>
 			<br>
