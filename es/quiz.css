@@ -731,7 +731,7 @@ ul.nav a:hover, ul.nav a {
 	letter-spacing: 1.5px
 }
 
-.navbar-brand:hover, ul.nav a:hover {
+ul.nav a:hover {
 	background-color: #ABAE9F !important;
 }
 
