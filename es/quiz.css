@@ -533,6 +533,11 @@ p.scoreText {
 	h2.startQuizHeader {
 		margin-left: 0px !important;
 	}
+
+	p.inline-blokc.scoreText.floatRight, p.block.description {
+		font-size: 12px;
+	}
+
 }
 
 * {
