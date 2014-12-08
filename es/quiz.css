@@ -540,7 +540,7 @@ p.scoreText {
 
 	p.questionChoice.text-center {
 		display: block !important;
-		margin: 0px auto !important
+		margin: 0px auto !important;
 		width: 220px !important;
 	}
 
