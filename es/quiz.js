@@ -4035,7 +4035,7 @@ $(document).ready(function(){
 		$('#statsContainer').children().hide();
 		averageTab.show();
 		for (var i = pieCharts.length - 1; i >= 0; i--) {
-			pieCharts[i].html("<canvas id='myPieChart"+chartNumbers[i]+"'></canvas>");
+			pieCharts[i].html("<canvas id='myPieChart"+chartNumbers[i]+"' class='pieChartsMobile'></canvas>");
 			var ctx = $("#myPieChart"+chartNumbers[i]).get(0).getContext("2d");
 			new Chart(ctx).Pie(graphResults("pie", responseChoices[i], null, questions[i]));
 			pieCharts[i].append("<p class='questionChoice text-center'>"+(i + 1)+". "+questions[i].question+"</p>")
