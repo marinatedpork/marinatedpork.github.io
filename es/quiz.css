@@ -524,10 +524,14 @@ p.scoreText {
 		background-size: 50px !important;
 		display: none !important;
 	}
-	
-	canvas {
+
+	.pieChartsMobile {
 		width: auto !important;
 		height: auto !important;
+	}
+
+	h2.startQuizHeader {
+		margin-left: 0px !important;
 	}
 }
 
