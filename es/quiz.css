@@ -415,6 +415,9 @@ p.scoreText {
 		margin-right: 0px !important;
 	}
 
+	div.block.courseHeader {
+		width: 100% !important;
+	}
 	.miniNav li > div {
 		font-size: 20px;
 	} 
