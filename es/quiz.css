@@ -407,14 +407,9 @@ p.scoreText {
 		width: 75px !important;
 		height: 75px !important;
 		background-size: 50px !important;
-		display: block !important;
-		margin: 0px auto !important;
+		display: none !important;
+		/*margin: 0px auto !important;*/
 	}
-	div.innerColumn {
-		margin-left: 0px !important;
-		margin-right: 0px !important;
-	}
-
 	div.block.courseHeader {
 		width: 100% !important;
 	}
@@ -532,13 +527,13 @@ p.scoreText {
 		display: none !important;
 		font-size: 18px !important;
 	}
-	/*div.inline-block.courseIcon {
+	div.inline-block.courseIcon {
 		width: 75px !important;
 		height: 75px !important;
 		background-size: 50px !important;
 		display: none !important;
 	}
-*/
+
 	.pieChartsMobile {
 		width: auto !important;
 		height: auto !important;
