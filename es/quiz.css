@@ -512,6 +512,10 @@ p.scoreText {
 }
 @media (max-width: 340px) {
 
+	nav {
+		margin-bottom: 10px !important;
+	}
+
 	button.navbar-toggle.collapsed {
 		margin-right: 0px !important;
 	}
