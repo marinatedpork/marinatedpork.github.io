@@ -3917,6 +3917,7 @@ $(document).ready(function(){
 		$("#progresNav").trigger("click");
 		$('#container').children().hide();
 		dashContainer.show();
+		$("#lineContainer").html("<canvas id='myChartLine'></canvas>");
 		var ctxFour     = $("#myChartLine").get(0).getContext("2d");
 		var myLineChart = new Chart(ctxFour).Line(graphResults("line", myScores));
 	});
