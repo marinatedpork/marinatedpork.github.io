@@ -262,7 +262,6 @@
 	margin-bottom: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background-color: #181E1F;
 	word-wrap
 	-o-transition:color .2s ease-out, background .2s ease-in;
   -ms-transition:color .2s ease-out, background .2s ease-in;
@@ -273,7 +272,7 @@
 }
 
 #quizStats:hover {
-	background-color: #39484A;
+	background-color: #181E1F;
 }
 
 #quizStats:hover .scoreIcon {
