@@ -535,7 +535,12 @@ p.scoreText {
 	}
 
 	p.inline-blokc.scoreText.floatRight, p.block.description {
-		font-size: 12px;
+		font-size: 12px !important;
+	}
+
+	p.questionChoice.text-center {
+		margin-left: 105px !important;
+		width: 220px !important;
 	}
 
 }
