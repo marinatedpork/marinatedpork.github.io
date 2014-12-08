@@ -524,7 +524,11 @@ p.scoreText {
 		background-size: 50px !important;
 		display: none !important;
 	}
-
+	
+	canvas {
+		width: auto !important;
+		height: auto !important;
+	}
 }
 
 * {
