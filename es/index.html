@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Everspring</title>
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One|Varela+Round|Playball' rel='stylesheet' type='text/css'>
+
+  <!-- css -->
+
+  <!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="quiz.css">
+	<script type="text/javascript" src="quiz.js"></script>
+</head>
+<body>
+	<div class="landing">
+
+<!-- nav -->
+
+	<nav class="navbar navbar cs-blue navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar cream-grey"></span>
+        <span class="icon-bar cream-grey"></span>
+        <span class="icon-bar cream-grey"></span>
+      </button>
+      <a class="navbar-brand" href="#">Advanced Poetics 5400</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" id="dashNav" class="mainNavText">Dashboard</a></li>
+        <li><a href="#" id="quizNav" class="mainNavText">Tests and Quizzes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="container">
+
+
+<!-- dash -->
+
+
+<div id="dashContainer">
+
+	<ul class="miniNav">
+		<li id="progressNav" class="active pointer">
+			<div class="inline-block miniNavIcon progressNav"></div>
+			<div class="inline-block navText">
+				<p class="inline-block navPad">
+					My Last Ten Quizzes
+				</p>
+			</div>
+		</li>
+		<li id="averageNav" class="pointer">
+			<div class="inline-block miniNavIcon averageNav"></div>
+			<div class="inline-block navText">
+				<p class="inline-block navPad">
+					How Others Are Answering
+				</p>
+			</div>
+		</li>
+		<li id="questionsNav" class="pointer">
+			<div class="inline-block miniNavIcon questionsNav"></div>
+			<div class="inline-block navText">
+			<p class="inline-block navPad">
+				My Scores vs. Peer Scores
+			</p>
+			</div>
+		</li>
+	</ul>
+	<div id="statsContainer">
+		<div id="progressTab">
+			<div class="graphContainer" id="lineContainer">
+				<canvas id="myChartLine"></canvas>
+			</div>
+		</div>
+		<div id="averageTab">
+			<div class="graphContainer">
+				<div class="innerColumn">
+					<div id="pieOneContainer">
+					</div>
+					<div id="pieThreeContainer">
+					</div>
+				</div>
+				<div class="innerColumn floatRight">
+					<div id="pieTwoContainer">
+					</div>
+					<div id="pieFourContainer">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="questionsTab">
+			<div class="graphContainer" id="barContainer">
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- quiz -->
+
+<div id="quizContainer">
+
+	<div class="startQuizContainer">
+		<div class="startQuizHeaderContainer">
+			<div class="block courseHeader">
+				<div class="inline-block courseIcon"></div>
+				<div class="inline-block navText">
+					<p class="inline-block welcome navPad">
+						Advanced Poetics 5400
+					</p>
+				</div>
+			</div>
+			<div class="row text-center welcomeDesc">
+				<h2 class="startQuizHeader">
+					Welcome, before you begin your studies, we have a <em>short</em> quiz to test your knowledge. 
+				</h2>
+				<h2 class="startQuizHeader">
+					Click the <em>"Start Quiz"</em> button below to begin.
+				</h2>
+			</div>
+		</div>
+		<div class="text-center">
+			<p id="startQuiz" class="inline-block pointer">
+			Start Quiz
+			</p>
+		</div>
+	</div>
+	<div id="quiz">
+		<div id="questionContainer"></div>
+		<div id="choiceContainer"></div>
+		<div id="next" class="pointer floatRight quizPager next">
+				Submit Answer
+		</div>
+		<div id="back" class="pointer floatLeft quizPager previous">
+			<div>
+				Previous Question
+			</div>
+		</div>
+	</div>
+	<div id="quizScore">
+		<div id="quizStats" class="block description">
+			<div class="inline-block miniNavIcon floatLeft scoreIcon"></div>
+			<p class="inline-block scoreText floatRight">
+				Thanks for takings part! Let's see how you did below:
+			</p>
+		</div>
+		<div id="quizChart" class="block">
+		</div>
+		<p class="block description">
+			You scored <span id="lastScore"></span>% correct. How did compared to other members of the course? Click <em>"Try Again"</em> to take questionaire again and see how you've improved!
+		</p>
+		<div id='retakeQuiz' class='pointer quizPager next'>
+			Retake Quiz
+		</div>
+	</div>
+
+</div>
+
+
+
+</div> <!-- END CONTAINER -->
+
+
+</body>
+</html>
