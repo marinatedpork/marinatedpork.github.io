@@ -400,6 +400,12 @@ p.scoreText {
 }
 
 @media (max-width: 555px) {
+
+	div.innerColumn {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+
 	.miniNav li > div {
 		font-size: 20px;
 	} 
