@@ -399,7 +399,16 @@ p.scoreText {
 }
 
 @media (max-width: 555px) {
-
+	p.inline-block.welcome.navPad {
+		display: none !important;
+		font-size: 18px !important;
+	}
+	div.inline-block.courseIcon {
+		width: 75px !important;
+		height: 75px !important;
+		background-size: 50px !important;
+		display: none !important;
+	}
 	div.innerColumn {
 		margin-left: 0px !important;
 		margin-right: 0px !important;
@@ -451,16 +460,6 @@ p.scoreText {
 
 @media (max-width: 460px) {
 
-	p.inline-block.welcome.navPad {
-		display: none !important;
-		font-size: 18px !important;
-	}
-	div.inline-block.courseIcon {
-		width: 75px !important;
-		height: 75px !important;
-		background-size: 50px !important;
-		display: none !important;
-	}
 	
 	.miniNav li > div {
 		font-size: 18px !important;
