@@ -539,7 +539,8 @@ p.scoreText {
 	}
 
 	p.questionChoice.text-center {
-		margin-left: 45px !important;
+		display: block;
+		margin: 0px auto;
 		width: 220px !important;
 	}
 
