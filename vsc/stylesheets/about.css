@@ -1,0 +1,104 @@
+#about-container {
+	border-radius: 5px;
+}
+
+#about-container div.tab:nth-child(2) div.text-image-holder div:first-child {
+	margin-top: 35px;
+}
+
+#about-container div.tab:nth-child(2) div.text-image-holder span:first-child {
+	margin-top: 10px;
+}
+
+#about-reel-one {
+	background: url(http://i.imgur.com/zFHhXga.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+#about-reel-two {
+	background: url(http://i.imgur.com/8RBPR0T.jpg?1) no-repeat center center;
+	background-size: cover;
+}
+
+.about-header {
+	padding: 10px;
+	padding-left: 20px;
+	font-size: 42px;
+	font-family: 'Playball', cursive;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	letter-spacing: 1.5px;
+	-o-transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+	-ms-transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+	-moz-transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+	-webkit-transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+	transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+}
+
+.about-text span:not(.sub-header) {
+	letter-spacing: 1px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.about-image {
+	width: 500px;
+	height: 350px;
+	transition: background 1s linear;
+	border-radius: 5px;
+	box-shadow: 2px 5px 5px #282828;
+}
+
+.text-image-holder {
+	width: 90%;
+	height: 425px;
+}
+
+.text-image-holder p {
+	margin-top: 30px;
+	margin-right: 10px;
+	padding-left: 20px;
+	width: 360px;
+	float: right;
+}
+
+span.sub-header {
+	display: block;
+	margin-bottom: 10px;
+	font-family: 'Playball', cursive;
+	text-align: center;
+	font-size: 24px;
+	margin-left:  10px;
+	margin-right:  10px;
+	border-radius: 5px;
+	letter-spacing: 1.5px;
+	-o-transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+	-ms-transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+	-moz-transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+	-webkit-transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+	transition: color .2s ease-out, background .2s ease-in, box-shadow .2s ease-in;
+}
+
+.about-header:hover, span.sub-header:hover {
+	background-color: #292E40;
+}
+
+span.sub-header:nth-child(2) {
+	margin-top: 10px !important;
+}
+
+.text-image-holder div.about-image {
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.extra-padding {
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}

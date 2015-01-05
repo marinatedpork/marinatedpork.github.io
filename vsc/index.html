@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vermillion Soap Company</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One|Varela+Round|Playball' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script type="text/javascript" src="js/plugins/snowfall.jquery.js"></script>
+	<script type="text/javascript" src="js/plugins/snowfall.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/about.js"></script>
+	<script type="text/javascript" src="js/soap.js"></script>
+	<script type="text/javascript" src="js/cart.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/about.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/cart.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/color.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/soap.css">
+</head>
+<body>
+<nav class="navbar navbar navbar-fixed-top black-bg" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar cream-grey"></span>
+        <span class="icon-bar cream-grey"></span>
+        <span class="icon-bar cream-grey"></span>
+      </button>
+      <a class="navbar-brand" href="#" id="landing-nav">Vermillion Soap Company</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" id="soap-nav">Soap</a></li>
+        <li><a href="#" id="about-nav">About</a></li>
+        <li><a href="#" id="cart-nav"><i class="fa fa-shopping-cart fa-2x"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="tab-container">
+
+
+	<div id="cart-container">
+		<h4 class='cart-title'>My Soaps:</h4>
+		<ul id="cart-list">
+		</ul>
+		<div class="checkout"><a href="#">Checkout</a></div>
+		<div class="cart-total float-right">
+			<span class='total-text'>
+				Total: $
+			</span>
+			<span id="total">
+			0.00
+			</span>
+		</div>
+	</div>
+
+
+	<div id="landing-container">
+		<h1 class="landing-title">Vermillion Soap Company</h1>
+		<h5 class="landing-title-caption">est. 1974</h5>
+		<div class="button-container">
+			<div id="about-button" class="button pointer">Our Story</div>
+			<div id="shop-button" class="button pointer">Shop Soaps</div>
+		</div>
+	</div>
+
+	<div id="about-container">
+		<div class="tab">
+			<h1 class="about-header white black-bg">A Family Tradition</h1>
+			<div class="text-image-holder center">
+				<div id="about-reel-one" class="about-image inline-block"></div>
+				<p class="about-text inline-block">
+					<span class="sub-header black-bg white">The Call of the Wild</span>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				</p>
+			</div>
+			<div class="center extra-padding">
+				<p class="about-text">
+					<span class="sub-header black-bg white">Four Decades in the Making</span>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+		</div>
+		<div class="tab">
+			<h1 class="about-header white black-bg">The Right Tools for the Job</h1>
+			<div class="text-image-holder center">
+				<div id="about-reel-two" class="about-image inline-block"></div>
+				<p class="about-text">
+					<span class="sub-header black-bg white">Foraging for the Best</span>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					<span class="sub-header black-bg white">The Essentials</span>
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				</p>	
+			</div>
+		</div>
+	</div>
+
+	<div id="soap-container" class="tab">
+	<div id="product-container"></div>
+	</div>
+
+</div>
+
+</body>
+</html>
