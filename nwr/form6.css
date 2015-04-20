@@ -42,6 +42,9 @@ li {
 	transition: all .5 ease-out;
 }
 
+.wufoo li.focused{
+	background-color: #FF5B00
+}
 .wufoo li label.desc {
 	transition: all .5 ease-out;
 }
