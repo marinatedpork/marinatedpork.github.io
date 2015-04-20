@@ -1,0 +1,30 @@
+form{
+	font-family: "Gotham";
+	background-color: #EEEEEE;
+	border-top: 1px solid #C1B8A6;
+}
+
+header {
+	display: none !important;
+}
+
+span.req {
+	display: none !important;
+}
+
+label.desc {
+	letter-spacing: 1.5px;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+#logo {
+	display: none !important;
+}
+
+ul li div a, a.powertiny {
+	position: absolute !important;
+  top: 20px;
+  z-index: -1;
+}
+
