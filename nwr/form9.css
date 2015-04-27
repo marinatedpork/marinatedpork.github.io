@@ -1,0 +1,69 @@
+* {
+	overflow: hidden;
+	background-color: #EEEEEE !important; 
+	border: none !important;
+}
+
+form {
+	font-family: "Gotham";
+	background-color: #EEEEEE;
+	margin: 0px !important;
+}
+
+header {
+	display: none !important;
+}
+
+span.req {
+	display: none !important;
+}
+
+label.desc {
+	letter-spacing: 1.5px !important;
+	font-weight: normal !important;
+	font-size: 14px !important;
+}
+
+#logo {
+	display: none !important;
+}
+
+li.phone span label {
+	display: none !important;
+}
+
+a.powertiny:after {
+  background-color: #EEEEEE;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+li {
+	transition: all .5 ease-out;
+	padding: 0px 1% 0px 1% !important;
+}
+
+.contact-us-company {
+	display: inline-block !important;
+	width: 48% !important;
+}
+
+
+.contact-us-number {
+	display: inline-block !important;
+	width: 47% !important;
+}
+
+.wufoo li.focused{
+	background-color: #FF5B00
+}
+
+.wufoo li label.desc {
+	transition: all .5 ease-out;
+}
