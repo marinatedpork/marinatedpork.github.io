@@ -56,61 +56,69 @@ $(document).ready(function() {
 	 			case 1:
 					nav.css({"color": "#262626"});
 					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
-					$('.brand-title').addClass('viewing', 1250);
-					$('.down-arrow').addClass('viewing', 1250);
+		 			setTimeout(function () {
+						$('.brand-title').addClass('viewing', 850);
+						$('.down-arrow').addClass('viewing', 850);
+					}, 200);
 	 			break;
 	 			case 2:
 					nav.css({"color": "white"});
 					hamburgerMenu.css({"color": "white", "border": "2px solid white"});
 	 			break;
 	 			case 3:
-	 				$(".founder-quotes").addClass('fade-n-slide', 500, function(){
-						$('#about-header').addClass('viewing', 1000);
-	 				});
-	 				$('#founder-quote-holder').css('top', '0px');
-					nav.css({"color": "white"});
-					hamburgerMenu.css({"color": "white", "border": "2px solid white"});
+						nav.css({"color": "white"});
+						hamburgerMenu.css({"color": "white", "border": "2px solid white"});
+		 			setTimeout(function () {
+		 				$(".founder-quotes").addClass('fade-n-slide', 300, function(){
+							$('#about-header').addClass('viewing', 400);
+		 				});
+		 				$('#founder-quote-holder').css('top', '0px');
+					}, 200);
 	 			break;
 	 			case 4:
 					nav.css({"color": "#262626"});
 					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
-	 				$('#portfolio-list').addClass('viewing', 1500);
- 					$('#portfolio-header').addClass('viewing', 1000);
-	 				$('#portfolio-list ul li span').addClass('viewing', 400, function(){
-	 				});
-	 				$('.portfolio-client').addClass('viewing', 1000);
-	 				$('.portfolio-description').addClass('viewing', 1000);
-	 				$('.portfolio-title').addClass('viewing', 1000);
-	 				$('.portfolio-info-row').addClass('viewing', 1000);
-	 				$('#video-frame div').addClass('viewing', 1000);
+		 			setTimeout(function () {
+		 				$('#portfolio-list').addClass('viewing', 1000);
+	 					$('#portfolio-header').addClass('viewing', 800);
+		 				$('#portfolio-list ul li span').addClass('viewing', 400, function(){
+		 				});
+		 				$('.portfolio-client').addClass('viewing', 800);
+		 				$('.portfolio-description').addClass('viewing', 800);
+		 				$('.portfolio-title').addClass('viewing', 800);
+		 				$('.portfolio-info-row').addClass('viewing', 800);
+		 				$('#video-frame div').addClass('viewing', 800);
+					}, 200);
 	 			break;
 	 			default:
 		 			nav.css({"color": "#262626"});
 		 			hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
-	 				$('#contact-us-header').addClass('viewing', 1000);
-	 				$('.social-media-container').addClass('viewing', 1000);
-	 				$('.business-inquiry-header').addClass('viewing', 1000);
-	 				$('.address a').addClass('viewing', 1000);
-	 				$('.kyles-name').addClass('viewing', 1000);
-	 				$('#contact-form-container').addClass('viewing', 1000);
-	 				$('.phone-number .info-holder span').addClass('viewing', 1000);
-	 				$('.email-address .info-holder span').addClass('viewing', 1000);
-	 				$('.business-inquiry-header span:not(.kyles-name)').addClass('viewing', 1000);
-	 				$('.address-text').addClass('viewing', 1000);
-	 				$('.info-line').addClass('viewing', 1000);
-	 				$('#reel-header').addClass('viewing', 1000);
-	 				$('.address-header').addClass('viewing', 1000);
-	 				$('#contact-info-container').addClass('viewing', 1000);
-	 				$('#leave-a-message').addClass('viewing', 1000);
-	 				$('.contact-flavor-text-container').addClass('viewing', 1000);
-	 				$('.address-header div:not(.i-circle) span').addClass('viewing', 1000);
+		 			setTimeout(function () {
+		 				$('#contact-us-header').addClass('viewing', 800);
+		 				$('.social-media-container').addClass('viewing', 800);
+		 				$('.business-inquiry-header').addClass('viewing', 800);
+		 				$('.address a').addClass('viewing', 800);
+		 				$('.kyles-name').addClass('viewing', 800);
+		 				$('#contact-form-container').addClass('viewing', 800);
+		 				$('.phone-number .info-holder span').addClass('viewing', 800);
+		 				$('.email-address .info-holder span').addClass('viewing', 800);
+		 				$('.business-inquiry-header span:not(.kyles-name)').addClass('viewing', 800);
+		 				$('.address-text').addClass('viewing', 800);
+		 				$('.info-line').addClass('viewing', 800);
+		 				$('#reel-header').addClass('viewing', 800);
+		 				$('.address-header').addClass('viewing', 800);
+		 				$('#contact-info-container').addClass('viewing', 800);
+		 				$('#leave-a-message').addClass('viewing', 800);
+		 				$('.contact-flavor-text-container').addClass('viewing', 800);
+		 				$('.address-header div:not(.i-circle) span').addClass('viewing', 800);
+					}, 200);
 					nav.css({"color": "#262626"});
 					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
 	 		}
 
 	  },	
 
-	  onSlideLeave: function(anchorLink, index, slideIndex, direction){
+	  afterSlideLoad: function(anchorLink, index, slideIndex, direction){
 
 	  	var nav				= $("nav"),
 	  	hamburgerMenu = $(".hamburger span");
