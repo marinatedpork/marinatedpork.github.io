@@ -1,0 +1,84 @@
+.brand-left {
+	position: fixed;
+	opacity: .8;
+	width: 70px;
+	left: 5%;
+	top: 0;
+	cursor: pointer;
+}
+
+.hamburger {
+	position: fixed;
+	z-index: 999;
+	top: 0; right: 0;
+	margin-right: 70px; margin-top: 20px;
+	cursor: pointer;
+	width: 29px;
+	height: 22px;
+}
+
+nav {
+	position: fixed;
+	z-index: 999;
+	top: 0; right: 0;
+	margin-right: 80px; margin-top: 8.5px;
+}
+
+nav.regular-margin {
+	margin-right: 120px !important;
+}
+
+nav ul {
+	margin-top: 6px;
+}
+
+nav ul li {
+	display: inline-block;
+	cursor: pointer;
+	letter-spacing: 2.5px;
+	font-size: 20px;
+	transition: border .4s ease-in-out, color .4s linear;
+}
+
+nav ul li:hover {
+	border-bottom: 4px solid #FF5B00;
+	color: #FF5B00;
+}
+
+
+nav ul li:nth-child(even) {
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.hamburger span {
+	width: 25px;
+	border: 2px solid #262626;
+	border-radius: 2px;
+	display: block;
+	transition: all .25s ease-in-out;
+}
+
+.hamburger span:nth-child(even){
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.x-menu {
+	margin-right: 73px;
+}
+.x-menu span:first-child {
+	position: absolute;
+	transform: rotate(-50deg) translate(1px, 10px);
+}
+
+.x-menu span:nth-child(2) {
+	opacity: 0;
+	transform: rotate(-50deg) translate(1px, 10px);
+	visibility: hidden;
+}
+
+.x-menu span:nth-child(3) {
+	position: absolute;
+	transform: rotate(50deg) translate(-1px, -12px);
+}

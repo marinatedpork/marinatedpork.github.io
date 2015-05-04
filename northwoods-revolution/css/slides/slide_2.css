@@ -1,0 +1,280 @@
+.row {
+  width: 90%;
+  height: 45%;
+  display: block;
+  margin: 0px auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.row > div {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.row div:first-child {
+  float: left;
+}
+
+.row div:nth-child(2) {
+  float: right;
+}
+
+.info-box {
+  width: 500px;
+  height: 230px;
+  display: inline-block;
+  position: relative;
+  -o-transition:box-shadow .4s ease-out;
+  -ms-transition:box-shadow .4s ease-out;
+  -moz-transition:box-shadow .4s ease-out;
+  -webkit-transition:box-shadow .4s ease-out;
+  transition:box-shadow .4s ease-out;
+  background: rgba(250,250,250, .4);
+}
+
+.info-title-container {
+  width: 100%;
+  margin: 0px auto;
+  display: block;
+  height: 65px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.description {
+  top: 27.5px;
+  left: 85px;
+  z-index: 2;
+  position: relative;
+}
+
+.description .about-title {
+  font-size: 24px;  
+}
+
+.about-title {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 4px;
+  -o-transition:all .4s ease-out;
+  -ms-transition:all .4s ease-out;
+  -moz-transition:all .4s ease-out;
+  -webkit-transition:all .4s ease-out;
+  transition:all .4s ease-out;
+}
+
+.about-flavor {
+  color: #4c4c4c;
+  font-size: 16px;
+  margin-top: 2.5px; 
+  margin-bottom: 0px !important;
+  opacity: 0;
+  font-style: italic;
+  -o-transition:all .4s ease-out;
+  -ms-transition:all .4s ease-out;
+  -moz-transition:all .4s ease-out;
+  -webkit-transition:all .4s ease-out;
+  transition:all .4s ease-out;
+}
+
+.pig {
+  z-index: 1;
+  position: absolute;
+  background-size: 45px;
+  height: 35px;
+  width: 35px;
+  padding: 20px;
+}
+
+.info-inception-icon {
+  background: url(https://i.imgur.com/5fISD3L.png) no-repeat center center;
+}
+
+.info-preproduction-icon {
+  background: url(https://i.imgur.com/G1tnzTq.png) no-repeat center center;
+}
+
+.info-production-icon {
+  background: url(https://i.imgur.com/F40sbdW.png) no-repeat center center;
+}
+
+.info-postproduction-icon {
+  background: url(https://i.imgur.com/NxP5qqZ.png) no-repeat center center;
+}
+
+.gray-bg {
+  background-color: #ff5b00;
+  /*background: rgba(232, 139, 56, .4);*/
+  /*background-color: #424242;*/
+  -o-transition:color .2s ease-out, background .5s ease-in;
+  -ms-transition:color .2s ease-out, background .5s ease-in;
+  -moz-transition:color .2s ease-out, background .5s ease-in;
+  -webkit-transition:color .2s ease-out, background .5s ease-in;
+  transition:color .2s ease-out, background .5s ease-in;
+}
+
+.info-text-container {
+  padding-left: 12.5px;
+  padding-right: 12.5px;
+  padding-bottom: 12.5px;
+}
+
+.info-text-container p {
+  -o-transition:color .2s ease-out;
+  -ms-transition:color .2s ease-out;
+  -moz-transition:color .2s ease-out;
+  -webkit-transition:color .2s ease-out;
+  transition:color .2s ease-out;
+}
+
+.info-box:hover .pig {
+  background-color: #E98B3A;
+}
+
+.info-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  -o-transition: opacity .6s ease-out;
+  -ms-transition: opacity .6s ease-out;
+  -moz-transition: opacity .6s ease-out;
+  -webkit-transition: opacity .6s ease-out;
+  transition: opacity .4s ease-out;
+  opacity: 0;
+  background: rgba(222,222,222, .3);
+}
+
+.info-text-overlay .about-flavor, .info-text-overlay .about-title {
+  text-align: center;
+}
+
+.info-text-overlay p {
+  -o-transition: all .6s ease-out;
+  -ms-transition: all .6s ease-out;
+  -moz-transition: all .6s ease-out;
+  -webkit-transition: all .6s ease-out;
+  transition: all .4s ease-out;
+  opacity: 0;
+  color: white;
+  margin-right: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  margin-top: 0px !important;
+}
+
+.info-text-overlay:before {
+  border-top: 1px solid  #FFF;
+  border-bottom: 1px solid #FFF;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.info-text-overlay:after {
+  border-right: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+.info-text-overlay:before, .info-text-overlay:after {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  bottom: 11px;
+  left: 11px;
+  content: '';
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 0.35s ease, -webkit-transform 0.35s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.info-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  right: 11px;
+  bottom: 0;
+  z-index: 2;
+  -o-transition: opacity .3s ease-out;
+  -ms-transition: opacity .3s ease-out;
+  -moz-transition: opacity .3s ease-out;
+  -webkit-transition: opacity .3s ease-out;
+  transition: opacity .3s ease-out;
+  opacity: 0;
+  background-size: cover;  
+  margin: 11px;
+}
+
+.info-box:hover .info-text-overlay {
+  opacity: 1;
+}
+
+.inception-bg {
+  background: url(https://i.imgur.com/i8REENq.png) no-repeat center center;
+}
+.preproduction-bg {
+  background: url(https://i.imgur.com/Q7Od1BN.png) no-repeat center center;
+}
+.production-bg {
+  background: url(https://i.imgur.com/5gSus2Z.png) no-repeat center center;
+}
+.postproduction-bg {
+  background: url(https://i.imgur.com/JxPtPFo.png) no-repeat center center;
+}
+
+.info-box:hover .info-text-overlay:before, .info-box:hover .info-text-overlay:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.4s ease .2s;
+  transition: opacity 0.4s ease, transform 0.45s ease .2s;
+}
+
+.info-box:hover .info-text-container p {
+  opacity: 0;
+}
+
+.info-box:hover .info-text-overlay p {
+  opacity: 1;
+}
+
+.info-box:hover .info-text-overlay .about-title {
+  padding-top: 7.5px;
+  opacity: 1;
+  color: white;  
+}
+
+.info-box:hover .info-text-overlay .about-flavor {
+  margin-left: 15px;
+  opacity: 1;
+  color: white;
+}
+
+.info-box:hover {
+  background: rgba(0,0,0, .5);
+}
+
+.info-box:hover .pig {
+  display: none;
+}
+
+.info-box:hover {
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.info-box:hover .info-image-overlay {
+  opacity: 1;
+}
+
+.info-box:hover .description .about-title {
+  opacity: 0;
+}

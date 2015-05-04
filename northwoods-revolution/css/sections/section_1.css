@@ -1,0 +1,50 @@
+
+.icon-chevron-down {
+	width: 100px;
+	color: white;
+	opacity: .8;
+	transition:color .4s ease-in;
+	-o-transition:color .4s ease-in;
+  -ms-transition:color .4s ease-in;
+  -moz-transition:color .4s ease-in;
+  -webkit-transition:color .4s ease-in;
+}
+
+.icon-chevron-down:hover {
+	color: #3F3F3F;	
+}
+
+.brand-title {
+  width: 70%;
+  height: 35%;
+  top: 0; left: 0; bottom: 30.5%; right: 0;
+}
+
+.brand-title.viewing {
+  bottom: 12.5%;
+}
+
+.down-arrow {
+	width: 100px;
+	height: 50px;
+	font-size: 36px;
+	z-index: 2;
+  top: 50%; left: 0; bottom: 0; right: 0;
+  cursor: pointer;
+  background: url(http://i.imgur.com/RmdK7Oi.png) no-repeat center center;
+  background-size: cover;
+  opacity: .6;
+	transition:opacity .4s ease-in;
+	-o-transition:opacity .4s ease-in;
+  -ms-transition:opacity .4s ease-in;
+  -moz-transition:opacity .4s ease-in;
+  -webkit-transition:opacity .4s ease-in;
+}
+
+.down-arrow.viewing {
+  top: 80%;
+}
+
+.down-arrow:hover {
+	opacity: 1;
+}

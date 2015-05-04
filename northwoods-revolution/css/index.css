@@ -1,0 +1,68 @@
+body {
+	font-family: 'Average Sans', serif;
+	color: #262626;	
+}
+
+video {
+	position: absolute;
+	top: 0; right: 0; left: 0; bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.brand-title, .brand-left {
+	z-index: 999;
+	position: absolute;	
+}
+
+.absolute-center {
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+}
+
+.absolute-center-two {
+	margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.horizontal-center {
+	position: absolute;
+	transform: translateX(50%);	
+}
+
+.section {
+	background-color: black;
+}
+
+
+.section:nth-child(5) {
+  background-color: #EEEEEE;
+}
+
+.section-content {
+	position: absolute;
+	width: 50%;
+	z-index: 2;
+	font-size: 40px;
+	line-height: 45px;
+	letter-spacing: 1.5px;
+	color: white;
+	/*font-style: italic;*/
+	font-family: "Fell English";
+	transition:  all 1.5s ease-out, opacity 2.25s ease-out;
+	-o-transition: all 1.5s ease-out, opacity 2.25s ease-out;
+  -ms-transition: all 1.5s ease-out, opacity 2.25s ease-out;
+  -moz-transition: all 1.5s ease-out, opacity 2.25s ease-out;
+  -webkit-transition: all 1.5s ease-out, opacity 2.25s ease-out;
+}
+
+.slide {
+}
