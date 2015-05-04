@@ -22,6 +22,7 @@ $(document).ready(function() {
 	 				$(".founder-quotes").removeClass('fade-n-slide');
 	 				$('#founder-quote-holder').css('top', '-30px');
 	 				$('#about-header').removeClass('viewing', 600);
+	 				$(".would-you-like-to-know-more").addClass('viewing', 300);
 	 			break;
 	 			case 4:
 	 				$('#portfolio-list').removeClass('viewing');
@@ -69,6 +70,7 @@ $(document).ready(function() {
 						nav.css({"color": "white"});
 						hamburgerMenu.css({"color": "white", "border": "2px solid white"});
 		 			setTimeout(function () {
+		 				$(".would-you-like-to-know-more").addClass('viewing', 500);
 		 				$(".founder-quotes").addClass('fade-n-slide', 300, function(){
 							$('#about-header').addClass('viewing', 400);
 		 				});
