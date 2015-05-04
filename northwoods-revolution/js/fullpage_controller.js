@@ -70,9 +70,9 @@ $(document).ready(function() {
 						nav.css({"color": "white"});
 						hamburgerMenu.css({"color": "white", "border": "2px solid white"});
 		 			setTimeout(function () {
-		 				$(".would-you-like-to-know-more").addClass('viewing', 900);
 		 				$(".founder-quotes").addClass('fade-n-slide', 300, function(){
 							$('#about-header').addClass('viewing', 400);
+			 				$(".would-you-like-to-know-more").addClass('viewing', 500);
 		 				});
 		 				$('#founder-quote-holder').css('top', '0px');
 					}, 200);
