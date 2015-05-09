@@ -65,7 +65,7 @@ $(document).ready(function() {
 					}, 200);
 		 			setTimeout(function() {
 		 				player.playVideo();
-		 			}, 1000);
+		 			}, 2000);
 	 			break;
 	 			case 2:
 					nav.css({"color": "white"});
@@ -83,7 +83,7 @@ $(document).ready(function() {
 					}, 200);
 		 			setTimeout(function() {
 		 				playerTwo.playVideo();
-		 			}, 1000);
+		 			}, 2000);
 	 			break;
 	 			case 4:
 					nav.css({"color": "#262626"});
