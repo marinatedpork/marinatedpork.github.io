@@ -3,6 +3,7 @@ $(document).ready(function() {
 	$('#fullPage').fullpage({
 
 		controlArrows: false,
+		anchors: ['index', 'reel', 'about', 'portfolio', 'contact'],
 	 	onLeave: function(index, nextIndex, direction){
 
 	    var nextSlide     = $("div.section.fp-section.fp-table.active div.fp-tableCell"),
