@@ -51,7 +51,6 @@
         // set up iframe player, use global scope so YT api can talk
         window.player;
         window.onYouTubeIframeAPIReady = function() {
-            console.log('hi');
             player = new YT.Player('tubular-player', {
                 width: options.width,
                 height: Math.ceil(options.width / options.ratio),
@@ -97,14 +96,12 @@
         }
 
         window.onPlayerStateChange = function(state) {
-            console.log(state);
             if (state.data === 0) { // video ended and repeat option is set true
                 player.seekTo(options.start); // restart
             }
         }
 
         window.onPlayerStateChangeTwo = function(state) {
-            console.log(state);
             if (state.data === 0) { // video ended and repeat option is set true
                 playerTwo.seekTo(options.start); // restart
             }

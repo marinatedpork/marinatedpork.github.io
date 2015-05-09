@@ -32,6 +32,4 @@ $(document).ready(function(){
 	 	$('#play-reel').fadeOut(400);
 	 });
 
-	 $.fn.fullpage.moveTo(1);
-
 });
