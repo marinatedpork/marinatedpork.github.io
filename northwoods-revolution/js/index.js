@@ -18,7 +18,7 @@ $(document).ready(function(){
 	 	$.fn.fullpage.moveSectionDown();
 	 });
 
-	 $("body").on('click', '.menu', function(event) {
+	 $("body").on('click', '.hamburger', function(event) {
 	 	event.preventDefault();
 	 	$(".hamburger").toggleClass('x-menu');
 	 	$(".slide-nav").fadeToggle(400);

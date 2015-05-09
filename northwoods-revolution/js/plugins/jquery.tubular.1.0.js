@@ -9,7 +9,7 @@
 |* 
 |* Thanks,
 |* Sean */
-
+var player, playerTwo;
 ;(function ($, window) {
 
     // test for feature support and return if failure
