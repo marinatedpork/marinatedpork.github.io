@@ -65,7 +65,7 @@ $(document).ready(function() {
 					}, 200);
 		 			setTimeout(function() {
 		 				player.playVideo();
-		 			}, 2000);
+		 			}, 1000);
 	 			break;
 	 			case 2:
 					nav.css({"color": "white"});
@@ -83,7 +83,7 @@ $(document).ready(function() {
 					}, 200);
 		 			setTimeout(function() {
 		 				playerTwo.playVideo();
-		 			}, 2000);
+		 			}, 1000);
 	 			break;
 	 			case 4:
 					nav.css({"color": "#262626"});
@@ -123,7 +123,7 @@ $(document).ready(function() {
 			 				$('.contact-flavor-text-container'),
 			 				$('.address-header div:not(.i-circle) span')
 		 				];
-		 				tags.each(function(index, el) {
+		 				tags.forEach(function(index, el) {
 		 					el.addClass('viewing', 800);
 		 				});
 		 				}, 200);
