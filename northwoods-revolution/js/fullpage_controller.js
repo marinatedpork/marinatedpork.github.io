@@ -14,6 +14,7 @@ $(document).ready(function() {
 	 			case 1:
 	 				$('.brand-title').removeClass('viewing', 300);
 	 				$('.down-arrow').removeClass('viewing', 300);
+	 				player.pauseVideo();
 	 			break;
 	 			case 2:
 				 	$('#play-reel').show();
@@ -23,6 +24,7 @@ $(document).ready(function() {
 	 				$('#founder-quote-holder').css('top', '-30px');
 	 				$('#about-header').removeClass('viewing', 600);
 	 				$(".would-you-like-to-know-more").addClass('viewing', 300);
+	 				playerTwo.pauseVideo();
 	 			break;
 	 			case 4:
 	 				$('#portfolio-list').removeClass('viewing');
@@ -61,6 +63,7 @@ $(document).ready(function() {
 						$('.brand-title').addClass('viewing', 850);
 						$('.down-arrow').addClass('viewing', 850);
 					}, 200);
+	 				player.playVideo();
 	 			break;
 	 			case 2:
 					nav.css({"color": "white"});
@@ -76,6 +79,7 @@ $(document).ready(function() {
 		 				});
 		 				$('#founder-quote-holder').css('top', '0px');
 					}, 200);
+	 				playerTwo.playVideo();
 	 			break;
 	 			case 4:
 					nav.css({"color": "#262626"});
@@ -117,33 +121,6 @@ $(document).ready(function() {
 					nav.css({"color": "#262626"});
 					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
 	 		}
-
-	  },	
-
-	  afterSlideLoad: function(anchorLink, index, slideIndex, direction){
-
-	  	var nav				= $("nav"),
-	  	hamburgerMenu = $(".hamburger span");
-
-			switch(index) {
-				case 0:
-
-	 			break;
-
-	 			default:
-
-	 		};
-
-			switch(slideIndex) {
-				case 0:
-					nav.css({"color": "#262626"});
-					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
-	 			break;
-
-	 			default:
-					nav.css({"color": "white"});
-					hamburgerMenu.css({"color": "white", "border": "2px solid white"});
-	 		};
 
 	  }
 
