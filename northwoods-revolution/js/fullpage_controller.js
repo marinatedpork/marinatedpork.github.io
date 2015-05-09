@@ -3,7 +3,6 @@ $(document).ready(function() {
 	$('#fullPage').fullpage({
 
 		controlArrows: false,
-		anchors: ['index', 'reel', 'about', 'portfolio', 'contact'],
 	 	onLeave: function(index, nextIndex, direction){
 
 	    var nextSlide     = $("div.section.fp-section.fp-table.active div.fp-tableCell"),
@@ -15,7 +14,6 @@ $(document).ready(function() {
 	 			case 1:
 	 				$('.brand-title').removeClass('viewing', 300);
 	 				$('.down-arrow').removeClass('viewing', 300);
-	 				player.pauseVideo();
 	 			break;
 	 			case 2:
 				 	$('#play-reel').show();
@@ -25,7 +23,6 @@ $(document).ready(function() {
 	 				$('#founder-quote-holder').css('top', '-30px');
 	 				$('#about-header').removeClass('viewing', 600);
 	 				$(".would-you-like-to-know-more").addClass('viewing', 300);
-	 				playerTwo.pauseVideo();
 	 			break;
 	 			case 4:
 	 				$('#portfolio-list').removeClass('viewing');
@@ -64,9 +61,6 @@ $(document).ready(function() {
 						$('.brand-title').addClass('viewing', 850);
 						$('.down-arrow').addClass('viewing', 850);
 					}, 200);
-		 			setTimeout(function() {
-		 				player.playVideo();
-		 			}, 1000);
 	 			break;
 	 			case 2:
 					nav.css({"color": "white"});
@@ -82,9 +76,6 @@ $(document).ready(function() {
 		 				});
 		 				$('#founder-quote-holder').css('top', '0px');
 					}, 200);
-		 			setTimeout(function() {
-		 				playerTwo.playVideo();
-		 			}, 1000);
 	 			break;
 	 			case 4:
 					nav.css({"color": "#262626"});
