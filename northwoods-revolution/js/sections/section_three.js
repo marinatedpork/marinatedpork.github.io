@@ -6,7 +6,7 @@ $(document).ready(function(){
 			aboutTabs = [$("div[data-tab='bryan']"), $("div[data-tab='charlie']")];
 
 	aboutTabs[1].hide();
-	playerTwo.pauseVideo();
+	// playerTwo.pauseVideo();
 
 	$("div.secret-slide-three").hide();
 	$(".section-three-back-button").hide();
