@@ -38,6 +38,10 @@ nav ul li {
 	letter-spacing: 2.5px;
 	font-size: 20px;
 	transition: border .4s ease-in-out, color .4s linear;
+	-o-transition: border .4s ease-in-out, color .4s linear;
+  -ms-transition: border .4s ease-in-out, color .4s linear;
+  -moz-transition: border .4s ease-in-out, color .4s linear;
+  -webkit-transition: border .4s ease-in-out, color .4s linear;
 }
 
 nav ul li:hover {
@@ -57,6 +61,10 @@ nav ul li:nth-child(even) {
 	border-radius: 2px;
 	display: block;
 	transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
 }
 
 .hamburger span:nth-child(even){
@@ -69,16 +77,30 @@ nav ul li:nth-child(even) {
 }
 .x-menu span:first-child {
 	position: absolute;
-	transform: rotate(-50deg) translate(1px, 10px);
+	-webkit-transform: rotate(-50deg) translate(1px, 10px);
+   -moz-transform: rotate(-50deg) translate(1px, 10px);
+    -ms-transform: rotate(-50deg) translate(1px, 10px);
+     -o-transform: rotate(-50deg) translate(1px, 10px);
+        transform: rotate(-50deg) translate(1px, 10px);
+
 }
 
 .x-menu span:nth-child(2) {
 	opacity: 0;
-	transform: rotate(-50deg) translate(1px, 10px);
+	-webkit-transform: rotate(-50deg) translate(1px, 10px);
+   -moz-transform: rotate(-50deg) translate(1px, 10px);
+    -ms-transform: rotate(-50deg) translate(1px, 10px);
+     -o-transform: rotate(-50deg) translate(1px, 10px);
+        transform: rotate(-50deg) translate(1px, 10px);
+
 	visibility: hidden;
 }
 
 .x-menu span:nth-child(3) {
 	position: absolute;
-	transform: rotate(50deg) translate(-1px, -12px);
+	-webkit-transform: rotate(50deg) translate(-1px, -12px);
+   -moz-transform: rotate(50deg) translate(-1px, -12px);
+    -ms-transform: rotate(50deg) translate(-1px, -12px);
+     -o-transform: rotate(50deg) translate(-1px, -12px);
+        transform: rotate(50deg) translate(-1px, -12px);
 }
