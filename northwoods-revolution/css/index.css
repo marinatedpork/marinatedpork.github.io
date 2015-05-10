@@ -28,7 +28,6 @@ video {
   opacity: 0;
   letter-spacing: 2.5px;
   font-weight: normal;
-  animation: pulse1 1s linear infinite;
 }
 
 .light-box h1.viewing {
