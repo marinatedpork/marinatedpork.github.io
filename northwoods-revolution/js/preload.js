@@ -1,5 +1,4 @@
 
-
 var images = [
     'https://i.imgur.com/DnFULQ7.png',
     'https://i.imgur.com/KX860jc.jpg',
@@ -20,15 +19,6 @@ var obj = preLoadResources(images);
     obj.done(function(resources){
       console.log(resources);
     });
-
-    // obj.loading(function(a, b) {
-    //   _view.setLoadingMessage(
-    //     'Loading...<br><p>Resources ' + a + ' out of ' + b + '</p>'
-    //   );
-    // });
-
-
-
   function preLoadResources(arr) {
     var newResources = {};
     var loadedResources = 0;

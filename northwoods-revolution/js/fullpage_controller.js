@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	$('#contact-form-container').hide();
 	function addContactForm() {
 		var contactIframe = '<iframe src="https://northwoodsrevolution.wufoo.com/forms/z1m6elu41wj15ac/" height="100%" width="100%" frameborder="0"></iframe>';
 		var loadCount = 0;
@@ -10,7 +10,7 @@ $(document).ready(function() {
 			if (loadCount % 2 === 0) {
 				addContactForm();
 			}
-			$('#contact-form-container').fadeIn(function(){});
+			$('#contact-form-container').fadeIn();
 		});
 	}
 
@@ -19,9 +19,7 @@ $(document).ready(function() {
 		controlArrows: false,
 	 	onLeave: function(index, nextIndex, direction){
 
-	    var nextSlide     = $("div.section.fp-section.fp-table.active div.fp-tableCell"),
-	        currentSlide  = $("div.section.fp-section.fp-table.active div.fp-tableCell").prev(),
-	    		nav 					= $("nav"),
+	    var nav 					= $("nav"),
 	    		hamburgerMenu = $(".hamburger span");
 
 			switch(index) {

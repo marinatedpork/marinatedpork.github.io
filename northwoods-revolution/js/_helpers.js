@@ -1,1 +1,0 @@
-Array.prototype.findByProperty=function(p,v){var f;this.forEach(function(o){if(o[p]===v){f=o;}});return f;};
