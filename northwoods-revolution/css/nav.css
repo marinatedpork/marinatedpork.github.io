@@ -9,7 +9,7 @@
 
 .hamburger {
 	position: fixed;
-	z-index: 999;
+	z-index: 997;
 	top: 0; right: 0;
 	margin-right: 70px; margin-top: 20px;
 	cursor: pointer;
@@ -19,7 +19,7 @@
 
 nav {
 	position: fixed;
-	z-index: 999;
+	z-index: 997;
 	top: 0; right: 0;
 	margin-right: 80px; margin-top: 8.5px;
 }

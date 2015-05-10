@@ -10,8 +10,38 @@ video {
 	z-index: 1;
 }
 
-.brand-title, .brand-left {
-	z-index: 999;
+.light-box {
+	width: 100%;
+	height: 100%;
+	z-index: 998;
+	position: absolute;
+	top: 0; right: 0; left: 0; bottom: 0;
+	background-color: #0C1210;
+}
+
+.light-box h1 {
+	text-align: center;
+	position: absolute !important;	
+	color: #E98B3A;
+  left: 0; bottom: 18.5%; right: 0;
+  width: 100%;
+  opacity: 0;
+  letter-spacing: 2.5px;
+  font-weight: normal;
+  animation: pulse1 1s linear infinite;
+}
+
+.light-box h1.viewing {
+	opacity: 1;
+}
+
+.brand-title {
+	z-index: 999 !important;
+	position: absolute !important;	
+}
+
+.brand-left {
+	z-index: 997;
 	position: absolute;	
 }
 

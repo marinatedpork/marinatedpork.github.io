@@ -20,6 +20,19 @@
   top: 0; left: 0; bottom: 30.5%; right: 0;
 }
 
+.brand-title-2 {
+  opacity: 0;
+  width: 70%;
+  height: 35%;
+  top: 0; left: 0; bottom: 12.5%; right: 0;
+  z-index: 999 !important;
+  position: absolute !important;  
+}
+
+.brand-title-2.viewing {
+  opacity: 1;
+}
+
 .brand-title.viewing {
   bottom: 12.5%;
 }

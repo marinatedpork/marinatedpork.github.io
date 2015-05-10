@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+	$('.brand-title-2').addClass('viewing', 800);
+	$('.light-box h1').addClass('viewing', 800);
+	
 	$(".slide-nav").hide();
 	$(".brand-left").on('click', function(event) {
 		event.preventDefault();
@@ -31,5 +34,15 @@ $(document).ready(function(){
 	 	$("#reel").get(0).play();
 	 	$('#play-reel').fadeOut(400);
 	 });
+
+	 setTimeout(function(){
+	 	if (!$('#tubular-player').children().length){
+			console.log('Video 1 has nothing');
+	 	}
+	 	if (!$('#tubular-player-2').children().length) {
+			console.log('Video 2 has nothing');
+	 	}
+	 	$('.light-box').fadeOut();
+	 }, 8000);
 
 });
