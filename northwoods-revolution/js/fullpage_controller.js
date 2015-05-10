@@ -117,36 +117,6 @@ $(document).ready(function() {
 					nav.css({"color": "#262626"});
 					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
 	 		}
-
-	  },	
-
-	  afterSlideLoad: function(anchorLink, index, slideIndex, direction){
-
-	  	var nav				= $("nav"),
-	  	hamburgerMenu = $(".hamburger span");
-
-			switch(index) {
-				case 0:
-
-	 			break;
-
-	 			default:
-
-	 		};
-
-			switch(slideIndex) {
-				case 0:
-					nav.css({"color": "#262626"});
-					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
-	 			break;
-
-	 			default:
-					nav.css({"color": "white"});
-					hamburgerMenu.css({"color": "white", "border": "2px solid white"});
-	 		};
-
 	  }
-
- });
-
+	});
 });
