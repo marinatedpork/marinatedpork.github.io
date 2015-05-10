@@ -18,7 +18,7 @@ $(document).ready(function(){
 	 	$.fn.fullpage.moveSectionDown();
 	 });
 
-	 $("body").on('click', '.menu', function(event) {
+	 $("body").on('click', '.hamburger', function(event) {
 	 	event.preventDefault();
 	 	$(".hamburger").toggleClass('x-menu');
 	 	$(".slide-nav").fadeToggle(400);
@@ -31,7 +31,5 @@ $(document).ready(function(){
 	 	$("#reel").get(0).play();
 	 	$('#play-reel').fadeOut(400);
 	 });
-
-	 $.fn.fullpage.moveTo(1);
 
 });

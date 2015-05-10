@@ -278,3 +278,21 @@
 .info-box:hover .description .about-title {
   opacity: 0;
 }
+
+@media (max-width: 1230px) {
+  .row {
+    width: 100% !important;
+  }
+  .slide-two-info {
+    width: 100% !important;
+  }
+  .info-box {
+    width: 48% !important;
+  }
+}
+
+@media (max-width: 1010px) {
+  .info-box {
+    width: 46% !important;
+  }
+}

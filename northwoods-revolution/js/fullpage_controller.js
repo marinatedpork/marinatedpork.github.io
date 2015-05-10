@@ -113,7 +113,7 @@ $(document).ready(function() {
 		 				$('#leave-a-message').addClass('viewing', 800);
 		 				$('.contact-flavor-text-container').addClass('viewing', 800);
 		 				$('.address-header div:not(.i-circle) span').addClass('viewing', 800);
-					}, 200);
+		 				}, 200);
 					nav.css({"color": "#262626"});
 					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
 	 		}
