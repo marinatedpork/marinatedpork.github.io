@@ -20,8 +20,10 @@
 nav {
 	position: fixed;
 	z-index: 997;
-	top: 0; right: 0;
-	margin-right: 80px; margin-top: 8.5px;
+	top: 0;
+	right: 0;
+	margin-right: 80px;
+	margin-top: 8.5px;
 }
 
 nav.regular-margin {
@@ -30,10 +32,12 @@ nav.regular-margin {
 
 nav ul {
 	margin-top: 6px;
+	list-style: none !important;
 }
 
 nav ul li {
-	display: inline-block;
+	display: inline-block !important;
+	list-style: none !important;
 	cursor: pointer;
 	letter-spacing: 2.5px;
 	font-size: 20px;
@@ -92,7 +96,6 @@ nav ul li:nth-child(even) {
     -ms-transform: rotate(-50deg) translate(1px, 10px);
      -o-transform: rotate(-50deg) translate(1px, 10px);
         transform: rotate(-50deg) translate(1px, 10px);
-
 	visibility: hidden;
 }
 
