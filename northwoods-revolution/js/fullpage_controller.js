@@ -90,6 +90,7 @@ $(document).ready(function() {
 					}, 200);
 	 			break;
 	 			case 4:
+		 			$('#portfolio-list').show();
 					nav.css({"color": "#262626"});
 					hamburgerMenu.css({"color": "#262626", "border": "2px solid #262626"});	 				
 		 			setTimeout(function () {
@@ -105,8 +106,8 @@ $(document).ready(function() {
 					}, 200);
 	 			break;
 	 			default:
+	 			$('#portfolio-list').hide();
 		 			if (!$('#contact-form-container').children('#the-contact-form').length) {
-		 				console.log('Three');
 		 				addContactForm();
 		 			}
 		 			nav.css({"color": "#262626"});
