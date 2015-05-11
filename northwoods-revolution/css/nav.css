@@ -36,7 +36,7 @@ nav ul {
 }
 
 nav ul li {
-	display: inline-block !important;
+	display: inline-block;
 	list-style: none !important;
 	cursor: pointer;
 	letter-spacing: 2.5px;
